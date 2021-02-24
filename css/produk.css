@@ -1,0 +1,48 @@
+.img-about{
+    background-image: none;
+    background-color: transparent;
+}
+
+.img-about img{
+    box-shadow: 15px 10px 15px rgba(0,0,0,0.16);
+    width: 100%;
+    object-fit: cover;
+}
+
+.rate{
+    padding: 5px 10px;
+    background-color: #CB9273;
+    color: #fff;
+    width: 50px;
+    text-align: center;
+}
+
+.text-about p{
+    line-height: 2;
+}
+
+.carousel-indicators li{
+    background-color: #666 !important;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators .active{
+    background-color: #000 !important;
+}
+
+.bg-produk .title-text{
+    position: relative;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.bg-produk .title-text h1::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    top: 50px;
+    left: 135px;
+}
