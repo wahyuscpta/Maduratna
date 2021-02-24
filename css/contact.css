@@ -1,0 +1,30 @@
+.form-group label{
+    color: #000 !important;
+}
+
+.bg-info{
+    width: 500px;
+    height: 600px;
+    float: right;
+    background-color: red;
+    background-image: url(../img/11.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    padding-top: 30px;
+    color: #fff;
+}
+
+.bg-info h1{
+    margin-bottom: 100px;
+    letter-spacing: 5px;
+}
+
+.info{
+    margin: 50px 0;
+    letter-spacing: 3px;
+}
+
+.info i{
+    font-size: 24px;
+}

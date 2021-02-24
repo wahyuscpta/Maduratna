@@ -67,3 +67,85 @@
     top: 50px;
     left: 140px;
 }
+
+.text-testi p{
+    line-height: 2;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.icon-testi i{
+    color: #CB9273;
+    font-size: 24px;
+}
+
+.name-testi h3{
+    letter-spacing: 2px;
+}
+
+@media (max-width: 1199.98px) {
+    .text-detail-service-second::before{
+        width: 100px;
+        right: -130px !important; 
+    }
+
+    .text-detail-service::before{
+        width: 100px;
+        left: -100px;
+    }
+
+    .bg-staff .title-text h1::after{
+        left: 115px;
+    }
+}   
+
+@media (max-width: 991.98px) {
+    .text-detail-service-second::before{
+        width: 0px; 
+    }
+
+    .text-detail-service::before{
+        width: 0px;
+    }
+
+    .bg-staff .title-text h1::after{
+        left: 75px;
+    }
+
+    .icon-testi i{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .img-detail-service{
+        margin: 0 auto;
+    }
+
+    .text-detail-service{
+        text-align: center;
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: 50px !important;
+    }
+
+    .text-detail-service-second{
+        display: none;
+    }
+
+    .price{
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    .second-text{
+        display: block !important;
+        text-align: center;
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: 50px !important;
+    }
+    
+}
+
+

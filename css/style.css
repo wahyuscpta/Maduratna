@@ -280,3 +280,183 @@ p{
 .form-group{
     margin-bottom: 30px;
 }
+
+@media (max-width: 1199.98px) {    
+    .main-section .ripped{
+        bottom: -20%;
+    }
+    
+    .img-about{
+        width: 450px;
+    }
+    
+    .text-about h4{
+        font-size: 18px;
+        color: #CB9273;
+    }
+    
+    .text-about h1{
+        font-size: 30px;
+    }
+
+    .about h2{
+        font-size: 24px;
+    }
+
+    .bg-staff{
+        margin-top: -200px;
+    }
+
+    .title-text h1{
+        font-size: 30px;
+    }
+
+    .bg-pricelist{
+        margin-top: -200px;
+        background-color: #ECEBE6;
+    }
+    
+    .bg-pricelist .container-fluid{
+        padding: 0 200px;
+    }
+    
+    .img-price{
+        height: 700px;
+    }
+
+    .title-list::before{
+        width: 230px;
+    }
+    
+    .title-list h2{
+        font-size: 25px;
+    }
+
+    .bg-produk{
+        margin-top: -200px;
+    }
+
+    .produk .card-title::after{
+        left: 33%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-toggler {
+        background-color: transparent;
+        outline: none !important;
+        border: 1px solid transparent;
+    }
+
+    .main-section .container{
+        width: 100%;
+        background-color: red;
+        margin-left: 0px !important;
+    }
+
+    .section-part{
+        margin-top: 70px;
+        text-align: center !important;
+    }
+
+    .img-about{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    
+    .text-about h4{
+        font-size: 18px;
+        color: #CB9273;
+    }
+    
+    .text-about h1{
+        font-size: 30px;
+    }
+
+    .about h2{
+        font-size: 28px;
+    }
+
+    .card-title{
+        font-size: 24px;
+    }
+
+    .img-price{
+        margin-bottom: 50px;
+    }
+
+    .title-list::before{
+        width: 0px;
+    }
+
+    .produk .card-title::after{
+        left: 40%;
+    }
+
+}
+
+@media (max-width: 767.98px) { 
+    .main-section .ripped{
+        position: absolute;
+        bottom: -10%;
+    }
+
+    .bg-staff{
+        margin-top: -100px;
+    }
+
+    .img-price{
+        height: 500px;
+    }
+
+    .list{
+        padding-right: 20px;
+    }
+
+    .list h2{
+        font-size: 28px;
+    }
+
+    .bg-produk{
+        margin-top: -100px;
+    }
+
+    .produk .card-title::after{
+        left: 35%;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .main-section h1{
+        font-size: 50px;
+    }
+
+    .main-section .ripped{
+        bottom: -0%;
+    }
+
+    .bg-staff{
+        margin-top: -100px;
+    }
+
+    .bg-staff .title-text{
+        margin-top: 100px;
+    }
+
+    .bg-pricelist{
+        margin-top: 0px;
+    }
+
+    .bg-pricelist .container-fluid{
+        padding: 30px;
+    }
+
+    .bg-produk .title-text{
+        margin-top: 100px;
+    }
+
+    .produk .card-title::after{
+        left: 37%;
+    }
+    
+}
