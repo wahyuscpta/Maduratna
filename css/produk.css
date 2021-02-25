@@ -9,16 +9,75 @@
     object-fit: cover;
 }
 
-.rate{
-    padding: 5px 10px;
-    background-color: #CB9273;
-    color: #fff;
-    width: 50px;
-    text-align: center;
+.rate i{
+    color: #CB9273 !important;
 }
 
 .text-about p{
-    line-height: 2;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.text-about .list-group-item{
+    background-color: transparent !important;
+    border: none !important;
+    padding: 8px 0 !important;
+    font-family: Newsreader;
+}
+
+.carousel-control-prev{
+    left: 70% !important;
+}
+
+.carousel-control-next-icon {
+    background-image: none;
+}
+
+.carousel-control-prev-icon {
+    background-image: none;
+}
+
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 20px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    background-size: 100% 100%;
+    margin: 0 10px !important;
+}
+
+.carousel-control-next-icon i, .carousel-control-prev-icon i {
+    background-color: #CB9273;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 15%;
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+    float: right !important;
+}
+
+.text-about .list-group-item i{
+    margin-right: 15px;
+    margin-top: 5px;
 }
 
 .carousel-indicators li{
@@ -31,10 +90,16 @@
     background-color: #000 !important;
 }
 
+.bg-produk{
+    padding-top: -100px;
+    margin-bottom: 200px !important;
+}
+
 .bg-produk .title-text{
     position: relative;
     width: 30%;
     margin: 0 auto;
+    margin-top: -100px;
 }
 
 .bg-produk .title-text h1::after{
@@ -49,9 +114,12 @@
 
 @media (max-width: 991.98px) {
 
-    .rate{
-        font-size: 18px;
-        padding: 5px !important;
+    .carousel-control-next{
+        right: 5% !important;
+    }
+
+    .features{
+        display: none !important;
     }
 
     .text-about p{
@@ -73,8 +141,20 @@
 }
 
 @media (max-width: 767.98px) { 
+    .carousel-control-next, .carousel-control-prev{
+        top: 130px !important;
+    }
+
     .carousel-item{
         padding: 30px;
+    }
+
+    .text-detail{
+        margin-top: 150px !important;
+    }
+
+    .features{
+        display: block !important;
     }
 
     .img-about{
@@ -100,3 +180,16 @@
 
 }
 
+@media (max-width: 575.98px) {
+    .carousel-control-next, .carousel-control-prev{
+        top: 180px !important;
+    }
+
+    .text-detail{
+        margin-top: 200px !important;
+    }
+
+    .bg-produk .title-text{
+        margin-top: 0px;
+    }
+}

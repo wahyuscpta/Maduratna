@@ -14,23 +14,23 @@
 
         <nav class="navbar navbar-expand-lg fixed-top primary-nav">
             <div class="container container-md">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" width="100" height="100" class="d-inline-block align-top" alt="">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" width="100" height="100" class="d-inline-block align-top logo-1" alt="">
+                    <img src="img/logo-2.png" width="100" height="100" class="d-inline-block align-top logo-2" alt="">
                   </a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button> 
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml ml-auto">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">About</a>
-                    <a class="nav-item nav-link" href="#">Services</a>
-                    <a class="nav-item nav-link " href="#">Product</a>
-                    <a class="nav-item nav-link " href="#">Contact Us</a>
+                    <a class="nav-item nav-link" href="about.html">About</a>
+                    <a class="nav-item nav-link" href="service.html">Services</a>
+                    <a class="nav-item nav-link" href="produk.html">Product</a>
+                    <a class="nav-item nav-link " href="contact.html">Contact Us</a>
                 </div>
                 </div>
             </div>
-          </nav>
+        </nav>
 
 		<div class="container container-md">
             <div class="row">
@@ -46,8 +46,6 @@
         </div>
 
         <img src="img/ripped/1.png" alt="" class="img-fluid ripped">
-        
-		<!-- <i class="fa fa-angle-double-down blink" aria-hidden="true"></i> -->
 
 	</div>  
 
@@ -71,7 +69,9 @@
                         <div class="about">
                             <div class="row">
                                 <div class="col-3 col-md-2">
-                                    <div class="icon-about align-items-center"></div>
+                                    <div class="icon-about pl-3">
+                                        <i class="fas fa-user align-items-center"></i>
+                                    </div>
                                 </div>
 
                                 <div class="col-9 col-md-10">
@@ -86,7 +86,9 @@
                         <div class="about">
                             <div class="row">
                                 <div class="col-3 col-md-2">
-                                    <div class="icon-about align-items-center"></div>
+                                    <div class="icon-about ">
+                                        <i class="fas fa-money-check-alt align-items-center"></i>
+                                    </div>
                                 </div>
 
                                 <div class="col-9 col-md-10">
@@ -101,7 +103,9 @@
                         <div class="about">
                             <div class="row">
                                 <div class="col-3 col-md-2">
-                                    <div class="icon-about align-items-center"></div>
+                                    <div class="icon-about pl-3">
+                                        <i class="fas fa-cut align-items-center"></i>
+                                    </div>
                                 </div>
 
                                 <div class="col-9 col-md-10">
@@ -198,7 +202,7 @@
                                     </div>
     
                                     <div class="col-6">
-                                        <h2 class="float-right">100K</h2>
+                                        <h2 class="float-right price">100K</h2>
                                     </div>
     
                                     <div class="col-12">
@@ -220,7 +224,7 @@
                                     </div>
     
                                     <div class="col-6">
-                                        <h2 class="float-right">100K</h2>
+                                        <h2 class="float-right price">100K</h2>
                                     </div>
     
                                     <div class="col-12">
@@ -242,7 +246,7 @@
                                     </div>
     
                                     <div class="col-6">
-                                        <h2 class="float-right">100K</h2>
+                                        <h2 class="float-right price">100K</h2>
                                     </div>
     
                                     <div class="col-12">
@@ -264,7 +268,7 @@
                                     </div>
     
                                     <div class="col-6">
-                                        <h2 class="float-right">100K</h2>
+                                        <h2 class="float-right price">100K</h2>
                                     </div>
     
                                     <div class="col-12">
@@ -363,38 +367,38 @@
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">NO TELP</label>
                                     <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="No Telp">
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">EMAIL</label>
                                     <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">TANGGAL</label>
                                     <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Tanggal">
                                 </div>    
                             </div>
     
-                            <div class="col-6">
+                            <div class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">JAM</label>
-                                    <select name="" id="exampleInputPassword1" class="form-control pr-3">
+                                    <select name="" id="exampleInputPassword1" class="pr-3 select-control">
                                         <option value="">PILIH JAM</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="col-12 pt-3">
-                                <button type="submit" class="btn btn-primary mx-auto btn-block">SUBMIT APPOINMENT</button>
+                                <button type="submit" class="btn btn-primary mx-auto btn-block btn-lg">SUBMIT APPOINMENT</button>
                             </div>
 
                         </div>
@@ -405,7 +409,60 @@
         </div>
     </div>
 
-    
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam reiciendis perferendis ex mollitia sit quos nisi blanditiis qui, dolores quo soluta rerum quisquam eligendi eius labore. Ab in reprehenderit quisquam?</p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3 pl-lg-5">
+              <h6>Product</h6>
+              <ul class="footer-links">
+                <li><a href="">All Products</a></li>
+                <li><a href="">Hair Spray</a></li>
+                <li><a href="">Oil Based Pomade</a></li>
+                <li><a href="">Hair Shaver</a></li>
+                <li><a href="">Hair Serum</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Contact Us</a></li>
+              </ul>
+            </div>
+
+          </div>
+          <hr>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+           <a href="#">Maduratna</a>.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fab fa-whatsapp"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+    </footer>
+
 </body>
 </html>
 

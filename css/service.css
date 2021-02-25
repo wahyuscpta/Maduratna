@@ -68,6 +68,15 @@
     left: 140px;
 }
 
+.bg-staff{
+    margin-top: -400px;
+    padding-bottom: 100px !important;
+}
+
+.bg-staff .title-text{
+    margin-top: -100px !important;
+}
+
 .text-testi p{
     line-height: 2;
     font-size: 18px;
