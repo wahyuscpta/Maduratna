@@ -1,15 +1,23 @@
 .img-detail-service{
     width: 400px;
-    box-shadow: 15px 10px 15px rgba(0,0,0,0.16);
 }
 
-.text-detail-service h1, h4{
+.text-detail-service h1, .text-detail-service-second h1{
     letter-spacing: 3px;
+}
+
+.rate{
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.rate i{
+    color: #CB9273 !important;
 }
 
 .text-detail-service{
     position: relative;
-    padding-top: 150px;
+    padding-top: 130px;
 }
 
 .text-detail-service::before{
@@ -19,7 +27,7 @@
     height: 1px;
     background-color: #000;
     left: -150px;
-    bottom: 90px;
+    bottom: 150px;
 }
 
 .text-detail-service-second{
@@ -32,19 +40,34 @@
 .text-detail-service-second::before{
     content: '';
     position: absolute;
-    width: 170px;
+    width: 150px;
     height: 1px;
     background-color: #000;
-    right: -170px !important; 
-    bottom: 90px;
+    right: -190px !important; 
+    bottom: 150px;
+}
+
+.modal-header {
+    border-bottom: 0px solid #e9ecef ;
+}
+
+.modal-footer {
+    border-top: 0px solid #e9ecef ;
 }
 
 .price{
-    width: 70px;
-    padding: 5px 10px;
-    background-color: #CB9273;
-    color: #fff;
+    margin-top: 30px;
+    width: 100%;
+    padding: 8px 10px;
+    background-color: transparent;
+    border: 1px solid #CB9273;
+    border-radius: 5px;
+    color: #CB9273;
     text-align: center;
+}
+
+.btn-modal{
+    margin-top: 30px;
 }
 
 .title-text{
@@ -75,6 +98,10 @@
 
 .bg-staff .title-text{
     margin-top: -100px !important;
+}
+
+.bg-staff .title-text h1{
+    letter-spacing: 2px;
 }
 
 .text-testi p{
@@ -109,6 +136,9 @@
 }   
 
 @media (max-width: 991.98px) {
+    .bg-staff{
+        margin-top: -100px !important;
+    } 
     .text-detail-service-second::before{
         width: 0px; 
     }
@@ -144,7 +174,7 @@
 
     .price{
         width: 100px;
-        margin: 0 auto;
+        margin-left: 70px;
     }
 
     .second-text{
@@ -153,6 +183,10 @@
         padding: 0 !important;
         margin: 0 !important;
         margin-top: 50px !important;
+    }
+
+    .bg-staff .title-text h1::after{
+        left: 50px;
     }
     
 }

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -11,7 +12,7 @@
 </head>
 <body>
 
-      <div class=" main-section">
+    <div class="main-section">
 
         <nav class="navbar navbar-expand-lg fixed-top primary-nav">
             <div class="container container-md">
@@ -36,11 +37,11 @@
 		<div class="container">
             <div class="row">
                 
-                <div class="col-lg-2 col-lg-8 section-part text-left">
-                    <h4>ESTABLISHED 2010</h4>
+                <div class="col-lg-2 col-lg-8 section-part text-left" data-aos="fade-up">
+                    <h4>OUR SERVICES</h4>
                     <h1>PROFESSIONAL BARBER SHOP</h1>
                     <P>Rasakan Pengalaman di Barber Shop Terbaik</P>
-                    <i class="fa fa-angle-double-down blink" aria-hidden="true"></i>
+                    <a href="#bg-about"><i class="fa fa-angle-double-down blink" aria-hidden="true"></i></a>
                 </div>
 
             </div>    
@@ -51,12 +52,71 @@
 
 	</div>  
 
-    <div class="bg-about pt-5">
+    <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">MAKE APPOINMENT</h3>
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="row align-items-center">
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Lengkap">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="No Telp">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Tanggal">
+                                </div>    
+                            </div>
+    
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <select name="" id="exampleInputPassword1" class="pr-3 select-control">
+                                        <option value="">PILIH JAM</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+                    <button type="button" class="btn btn-primary">SUBMIT APPOINMENT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-about pt-5" id="bg-about">
         <div class="container">
 
             <div class="row">
                 <div class="col-12">
-                    <div class="title-text text-center mt-5">
+                    <div class="title-text text-center mt-5" data-aos="fade-up">
                         <h4>PENGALAMAN DENGAN BARBERSHOP TERBAIK</h4>
                         <h1>kami melayanai pelanggan dengan pelayanan terbaik dan skill yang profesional</h1>
                     </div>
@@ -67,16 +127,30 @@
                 <div class="row">
 
                     <div class="col-12 col-md-6">
-                        <div class="img-detail-service align-items-center">
-                            <img src="img/2.jpg" class="img-fluid align-items-center" alt="">
+                        <div class="img-detail-service align-items-center" data-aos="fade-up">
+                            <img src="img/service/1.jpg" class="img-fluid align-items-center" alt="">
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <div class="text-detail-service pl-5 ml-5">
-                            <h1>HAIRCUTING</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores perferendis.</p>
-                            <h4 class="price">100K</h4>
+                        <div class="text-detail-service pl-5 ml-5" data-aos="fade-left">
+                            <h1>MAN HAIRCUTING</h1>
+                            <div class="rate">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>Layanan perawatan sederhana dan cepat namun berkualitas tinggi yang memberikan potongan rambut paling menarik, diikuti dengan pijat kepala dan punggung dan pemberian pomade.</p>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <h4 class="price">100K</h4>
+                                </div>
+                                <div class="col btn-modal">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">BOOK NOW</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -88,24 +162,52 @@
                 <div class="row">
 
                     <div class="col-12 col-md-6">
-                        <div class="text-detail-service-second pl-5 ml-5">
-                            <h1>TRIMING</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores perferendis.</p>
-                            <h4 class="price align-items-center">100K</h4>
+                        <div class="text-detail-service-second pl-5 ml-5" data-aos="fade-right">
+                            <h1>HAIR COLORING</h1>
+                            <div class="rate">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="text-justify">Anda menginginkannya, kami membuatnya. Biarkan tukang cukur berpengalaman kami mewarnai rambut Anda dengan sempurna sesuai keinginan.</p>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <h4 class="price">100K</h4>
+                                </div>
+                                <div class="col btn-modal">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">BOOK NOW</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <div class="img-detail-service float-lg-right align-items-center">
-                            <img src="img/15.jpg" class="img-fluid align-items-center" alt="">
+                        <div class="img-detail-service float-lg-right align-items-center" data-aos="fade-up">
+                            <img src="img/service/5.jpg" class="img-fluid align-items-center" alt="">
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <div class="text-detail-service-second second-text pl-5 ml-5" style="display: none;">
-                            <h1>TRIMING</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores perferendis.</p>
-                            <h4 class="price align-items-center">100K</h4>
+                        <div class="text-detail-service-second second-text pl-5 ml-5" style="display: none;" data-aos="fade-left">
+                            <h1>HAIR COLORING</h1>
+                            <div class="rate">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="text-justify">Anda menginginkannya, kami membuatnya. Biarkan tukang cukur berpengalaman kami mewarnai rambut Anda dengan sempurna sesuai keinginan.</p>
+                            <div class="row">
+                                <div class="col-3 col-md-4 col-sm-6">
+                                    <h4 class="price">100K</h4>
+                                </div>
+                                <div class="col btn-modal">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">BOOK NOW</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -116,16 +218,30 @@
                 <div class="row">
 
                     <div class="col-12 col-md-6">
-                        <div class="img-detail-service align-items-center">
-                            <img src="img/5.jpg" class="img-fluid align-items-center" alt="">
+                        <div class="img-detail-service align-items-center" data-aos="fade-up">
+                            <img src="img/service/3.jpg" class="img-fluid align-items-center" alt="">
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <div class="text-detail-service pl-5 ml-5">
+                        <div class="text-detail-service pl-5 ml-5" data-aos="fade-left">
                             <h1>BEARD SHAVING</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores perferendis.</p>
-                            <h4 class="price">100K</h4>
+                            <div class="rate">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="text-justify">Dimulai dengan handuk panas untuk merilekskan kulit Anda dan membuka pori-pori Anda, diikuti dengan pencukuran yang cermat dan nyaman. </p>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <h4 class="price">100K</h4>
+                                </div>
+                                <div class="col btn-modal">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">BOOK NOW</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -136,24 +252,45 @@
                 <div class="row">
 
                     <div class="col-12 col-md-6">
-                        <div class="text-detail-service-second pl-5 ml-5">
-                            <h1>HAIRSTYLING</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores perferendis.</p>
-                            <h4 class="price">100K</h4>
+                        <div class="text-detail-service-second pl-5 ml-5" data-aos="fade-right">
+                            <h1>HAIR GROOMING</h1>
+                            <div class="rate">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="text-justify">Layanan perawatan pria penuh. Dimulai dengan handuk dingin, lalu potong dan cuci rambut, dilanjutkan dengan pijat kepala dan punggung dengan handuk panas, diakhiri dengan pengaplikasian hair tonic dan pomade berkualitas tinggi. </p>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <h4 class="price">100K</h4>
+                                </div>
+                                <div class="col btn-modal">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">BOOK NOW</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <div class="img-detail-service float-lg-right align-items-center">
-                            <img src="img/4.jpg" class="img-fluid align-items-center" alt="">
+                        <div class="img-detail-service float-lg-right align-items-center" data-aos="fade-up">
+                            <img src="img/service/2.jpg" class="img-fluid align-items-center" alt="">
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <div class="text-detail-service-second second-text pl-5 ml-5" style="display: none;">
-                            <h1>TRIMING</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores perferendis.</p>
-                            <h4 class="price align-items-center">100K</h4>
+                        <div class="text-detail-service-second second-text pl-5 ml-5" style="display: none;" data-aos="fade-left">
+                            <h1>HAIR GROOMING</h1>
+                            <p class="text-justify">Layanan perawatan pria penuh. Dimulai dengan handuk dingin, lalu potong dan cuci rambut, dilanjutkan dengan pijat kepala dan punggung dengan handuk panas, diakhiri dengan pengaplikasian hair tonic dan pomade berkualitas tinggi. </p>
+                            <div class="row">
+                                <div class="col-3 col-md-4 col-sm-6">
+                                    <h4 class="price">100K</h4>
+                                </div>
+                                <div class="col btn-modal">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">BOOK NOW</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -170,12 +307,12 @@
 
             <div class="row">
                 <div class="col-12">
-                    <div class="title-text text-center mb-5">
+                    <div class="title-text text-center mb-5" data-aos="fade-up">
                         <h1>TESTIMONIALS</h1>
                     </div>
                 </div>
 
-                <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel" data-aos="fade-up">
     
                     <div class="carousel-inner">
     
@@ -282,28 +419,26 @@
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <h6>About</h6>
-              <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam reiciendis perferendis ex mollitia sit quos nisi blanditiis qui, dolores quo soluta rerum quisquam eligendi eius labore. Ab in reprehenderit quisquam?</p>
+              <p class="text-justify">Maduratna Barbershop adalah merek barbershop premium di Indonesia. Kami mengutamakan kepuasan tamu kami dengan layanan berkualitas tinggi, perlengkapan sanitasi, fasilitas nyaman, dan tukang cukur berpengalaman.</p>
             </div>
+
+            <div class="col-xs-6 col-md-3 ml-lg-5 pl-lg-5">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                  <li><a href="">Home</a></li>
+                  <li><a href="">About</a></li>
+                  <li><a href="">Services</a></li>
+                  <li><a href="">Product</a></li>
+                  <li><a href="">Contact Us</a></li>
+                </ul>
+              </div>
   
-            <div class="col-xs-6 col-md-3 pl-lg-5">
-              <h6>Product</h6>
+            <div class="col-xs-6 col-md-2">
+              <h6>Our Info</h6>
               <ul class="footer-links">
-                <li><a href="">All Products</a></li>
-                <li><a href="">Hair Spray</a></li>
-                <li><a href="">Oil Based Pomade</a></li>
-                <li><a href="">Hair Shaver</a></li>
-                <li><a href="">Hair Serum</a></li>
-              </ul>
-            </div>
-  
-            <div class="col-xs-6 col-md-3">
-              <h6>Quick Links</h6>
-              <ul class="footer-links">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Product</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="">Jl. Raya Sesetan 123 Denpasar</a></li>
+                <li class="mt-4"><a href="">+22 123 456</a></li>
+                <li><a href="">maduratnabarber@gmail.com</a></li>
               </ul>
             </div>
 
@@ -337,6 +472,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
         $(document).on("scroll", function(){
@@ -348,4 +484,8 @@
         }
 
         });
+    </script>
+
+    <script>
+        AOS.init();
     </script>

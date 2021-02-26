@@ -4,11 +4,12 @@
 
 .about{
     margin-top: 100px !important;
+    padding: 0 20px;
 }
 
 .about i{
     font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     color: #CB9273;
 }
 
@@ -28,6 +29,10 @@
     margin-left: -40px !important;
 }
 
+.desc-staff h2{
+    letter-spacing: 2px;
+}
+
 .desc-staff p{
     line-height: 2;
 }
@@ -43,6 +48,12 @@
 
 .socmed i{
     font-size: 24px;
+    transition: .7s;
+    cursor: pointer;
+}
+
+.socmed i:hover{
+    color: #CB9273;
 }
 
 @media (max-width: 991.98px) {
