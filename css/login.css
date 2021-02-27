@@ -1,0 +1,39 @@
+.bg-login{
+    height: 100vh;
+    background-image: url(../img/11.jpg);
+    background-position: bottom;
+    background-size: cover;
+}
+
+.text-login h1{
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 80px;
+    margin-top: 20rem;
+}
+
+.login{
+    background-color: rgba(0, 0, 0, .70);
+    height: 80vh;
+    margin: 100px 0;
+    padding: 30px;
+}
+
+.login h1{
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.login .title-text{
+    position: relative;
+    margin-bottom: 100px !important;
+}
+.login .title-text::after{
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #ececec;
+    top: 50px;
+    left: 40%;
+}

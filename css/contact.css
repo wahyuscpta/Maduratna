@@ -7,6 +7,7 @@
     margin: 0;
     margin-top: 100px;
 }
+
 .info .title-text h1{
     font-weight: 600;
     color: #444;
@@ -63,12 +64,49 @@
     .maps{
         padding-right: 0px !important;
     }
+
+    .info .title-text h1{
+        font-size: 40px;
+    }
     
 }
-
 
 @media (max-width: 767.98px) {
     .bg-maps{
         margin-top: -100px;
     }
 }
+
+@media (max-width: 575.98px) {
+    .main-section .ripped{
+        bottom: 0%;
+    }
+
+    .info .title-text{
+        margin-top: 0px;
+        width: 100%;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 375.98px) {
+    .info .title-text h1{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 320.98px) {
+    .main-section .ripped{
+        bottom: -10%;
+    }
+
+    .info .title-text{
+        margin-top: 70px;
+    }
+
+    .title-contact h1{
+        font-size: 24px;
+    }
+    
+}
+    

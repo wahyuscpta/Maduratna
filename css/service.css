@@ -55,15 +55,8 @@
     border-top: 0px solid #e9ecef ;
 }
 
-.price{
+.btn-secondary{
     margin-top: 30px;
-    width: 100%;
-    padding: 8px 10px;
-    background-color: transparent;
-    border: 1px solid #CB9273;
-    border-radius: 5px;
-    color: #CB9273;
-    text-align: center;
 }
 
 .btn-modal{
@@ -168,13 +161,22 @@
         margin-top: 50px !important;
     }
 
+    .text-detail-service p, .text-detail-service-second p{
+        text-align: center !important;
+    }
+
     .text-detail-service-second{
         display: none;
     }
 
-    .price{
+    .btn-secondary{
+        float: right !important;
         width: 100px;
         margin-left: 70px;
+    }
+
+    .btn{
+        float: left;
     }
 
     .second-text{
@@ -191,4 +193,67 @@
     
 }
 
+@media (max-width: 575.98px) { 
+    .bg-staff{
+        margin-top: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 1366px){
+    .bg-staff{
+        margin-top: -200px;
+    }
+}
+
+@media (max-width: 375px){
+    .main-section .ripped{
+        bottom: 0%;
+    }
+
+    .bg-staff .title-text{
+        margin-top: 50px !important;
+        width: 70%;
+    }
+
+    .bg-staff .title-text h1::after{
+        left: 95px;
+    }
+    
+    .img-detail-service {
+        width: 200px;
+    }    
+
+}
+
+@media (max-width: 320px){
+    .main-section .ripped{
+        bottom: -10%;
+    }
+
+    .bg-about{
+        margin-top: 50px;
+    }
+
+    .img-detail-service{
+        width: 400px;
+    }
+
+    .img-detail-service {
+        width: 200px;
+    }    
+
+    .bg-staff{
+        margin-top: 0px;
+    }
+    
+    .bg-staff .title-text h1::after{
+        left: 75px;
+    }
+
+    .text-testi p{
+        line-height: 2;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+}
 
