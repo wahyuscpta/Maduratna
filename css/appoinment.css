@@ -1,0 +1,72 @@
+.appoinment{
+    background-color: transparent;
+    opacity: 100%;
+}
+
+.bg-appoinment{
+    height: 100vh !important;
+}
+
+.nota{
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.nota::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    top: 40%;
+    left: -10px;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+    inset -10px -10px 15px rgba(255,255,255,0.5),
+    inset 10px 10px 15px rgba(70,70,70,0.12);
+}
+
+.nota::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    top: 40%;
+    right: -10px;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+    10px 10px 15px rgba(70,70,70,0.12),
+    inset -10px -10px 15px rgba(255,255,255,0.5),
+    inset 10px 10px 15px rgba(70,70,70,0.12);
+}
+
+.nota table{
+    margin-bottom: 10px;
+}
+
+.nota hr{
+    border: .5px dashed #333;
+}
+
+.nota p{
+    margin-top: 30px;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.nota h5, h1{
+    text-align: center;
+}
+
+
+.nota h1{
+    font-size: 30px;
+    color: #444 !important;
+}

@@ -1,13 +1,23 @@
+<?php
+
+    require_once "config/conn.php";
+    require_once "config/helper.php";
+
+    $query = "SELECT tb_jam.jam, tb_jam.kategori, tb_jam.id_jam, tb_appoinment.id_jam FROM tb_jam, tb_appoinment WHERE tb_jam.id_jam != tb_appoinment.id_jam;";
+    $sql = mysqli_query($conn, $query);
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="img/logo-2.png" type="image/x-icon">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?php time() ?>">
     <title>Maduratna Barber Shop</title>
 </head>
 <body>
@@ -112,8 +122,8 @@
                         <h1>KAMI MENYAMBUT ANDA DENGAN PELAYANAN TERBAIK DAN PENUH KENYAMANAN.</h1>
                     </div>
 
-                    <div class="col-12 pt-5">
-                        <div class="about" data-aos="fade-up">
+                    <div class="col-12 pt-5" data-aos="fade-up">
+                        <div class="about">
                             <div class="row">
                                 <div class="col-3 col-md-2">
                                     <div class="icon-about pl-3">
@@ -130,7 +140,7 @@
                     </div>
 
                     <div class="col-12 pt-5">
-                        <div class="about" data-aos="fade-up">
+                        <div class="about">
                             <div class="row">
                                 <div class="col-3 col-md-2">
                                     <div class="icon-about">
@@ -147,7 +157,7 @@
                     </div>
 
                     <div class="col-12 pt-5">
-                        <div class="about" data-aos="fade-up">
+                        <div class="about">
                             <div class="row">
                                 <div class="col-3 col-md-2">
                                     <div class="icon-about pl-3">
@@ -404,49 +414,40 @@
                     </div>
                 </div>
 
-                <div class="container" data-aos="fade-up">
-                    <form>
+                <div class="container">
+                    <form action="proses/appoinment_proses.php" method="POST">
                         <div class="row align-items-center">
 
                             <div class="col-12">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">NAMA LENGKAP</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Lengkap">
+                                    <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Lengkap">
                                 </div>
                             </div>
 
                             <div class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">NO TELP</label>
-                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="No Telp">
+                                    <input type="number" name="notelp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="No Telp">
                                 </div>
                             </div>
 
                             <div class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">EMAIL</label>
-                                    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                                    <input type="email" name="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
                                 </div>
                             </div>
 
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-md-12">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">TANGGAL</label>
-                                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Tanggal">
+                                    <input type="date" name="tgl" class="form-control" id="exampleInputPassword1" placeholder="Tanggal">
                                 </div>    
-                            </div>
-    
-                            <div class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">JAM</label>
-                                    <select name="" id="exampleInputPassword1" class="pr-3 select-control">
-                                        <option value="">PILIH JAM</option>
-                                    </select>
-                                </div>
                             </div>
 
                             <div class="col-12 pt-3">
-                                <button type="submit" class="btn btn-primary mx-auto btn-block btn-lg">SUBMIT APPOINMENT</button>
+                                <button type="submit" name="btn-next" class="btn btn-primary mx-auto btn-block btn-lg">BOOK APPOINMENT</button>
                             </div>
 
                         </div>
@@ -555,3 +556,4 @@
             });
 
     </script>
+

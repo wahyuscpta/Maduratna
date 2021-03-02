@@ -83,27 +83,32 @@
                                 </div>
                             </div>
                             
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="NAMA LENGKAP">
-                                </div>
-                            </div>
+                            <form action="proses/pesan.php" method="POST">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="NAMA LENGKAP">
+                                        </div>
+                                    </div>
 
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="EMAIL">
-                                </div>
-                            </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="EMAIL">
+                                        </div>
+                                    </div>
 
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <textarea name="" id="" cols="30" rows="5" class="form-control" id="exampleInputPassword1" placeholder="PESAN UNTUK KAMI"></textarea>
-                                </div>
-                            </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="pesan" cols="30" rows="5" class="form-control" id="exampleInputPassword1" placeholder="PESAN UNTUK KAMI"></textarea>
+                                        </div>
+                                    </div>
 
-                            <div class="col-12 pt-3">
-                                <button type="submit" class="btn btn-danger mx-auto btn-block">KIRIM</button>
-                            </div>                            
+                                    <div class="col-12 pt-3">
+                                        <button type="submit" name="btn-submit" class="btn btn-danger mx-auto btn-block">KIRIM</button>
+                                    </div>  
+                                </div>
+                            </form>
+
                         </div>
 
                     </div>

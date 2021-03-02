@@ -1,8 +1,9 @@
 .bg-login{
     height: 100vh;
     background-image: url(../img/11.jpg);
-    background-position: bottom;
+    background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
 
 .text-login h1{
@@ -26,8 +27,9 @@
 
 .login .title-text{
     position: relative;
-    margin-bottom: 100px !important;
+    margin-bottom: 50px !important;
 }
+
 .login .title-text::after{
     content: '';
     position: absolute;
@@ -48,3 +50,49 @@
     color: #444;
   }
   
+@media only screen and (max-width: 1366px){
+    .text-login h1{
+        height: 100vh !important;
+        margin-top: 15rem;
+    }
+    
+    .login{
+        background-color: rgba(0, 0, 0, .70);
+        height: 90vh;
+        margin: 50px 0;
+        padding: 30px;
+    }
+    
+}
+
+@media screen and (max-width: 991px){
+    .text-login h1{
+        height: 100vh !important;
+        margin-top: 10rem;
+    }
+
+    .login .title-text{
+        width: 100% !important;
+        position: relative;
+        margin-bottom: 100px !important;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .text-login{
+        display: none;
+    }
+
+    .login{
+        background-color: rgba(0, 0, 0, .70);
+        height: 90vh;
+        margin: 30px 0;
+        padding: 30px;
+    }
+
+    .login .title-text{
+        width: 100% !important;
+        position: relative;
+        margin-bottom: 50px !important;
+    }
+}

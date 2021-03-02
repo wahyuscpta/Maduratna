@@ -6,8 +6,8 @@
     <link rel="shortcut icon" href="img/logo-2.png" type="image/x-icon">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/style.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="../css/login.css?v=<?= time() ?>">
     <title>Maduratna Barber Shop - Login Page</title>
 </head>
 <body>
@@ -27,32 +27,32 @@
                         <div class="row">
 
                             <div class="col-12 mt-5">
-                                <div class="title-text text-center mb-5" data-aos="fade-up">
+                                <div class="title-text text-center" data-aos="fade-up">
                                     <h1>SILAHKAN LOGIN</h1>
                                 </div>
                             </div>
             
                             <div class="container" data-aos="fade-up">
-                                <form>
+                                <form action="process/login-process.php" method="POST">
                                     <div class="row align-items-center">
             
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">USERNAME</label>
-                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                                                <input type="text" name="usn" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
                                             </div>
                                         </div>
             
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">PASSWORD</label>
-                                                <input type="password" id="password-field" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password">
+                                                <input type="password" name="pass" id="password-field" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password">
                                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                                             </div>
                                         </div>
             
                                         <div class="col-12 pt-3">
-                                            <button type="submit" class="btn btn-primary float-right btn-lg">LOGIN GAN</button>
+                                            <button type="submit" name="btn-login" class="btn btn-primary float-right btn-lg">LOGIN GAN</button>
                                         </div>
             
                                     </div>
