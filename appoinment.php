@@ -46,6 +46,25 @@
                                 </div>
                             </div>
 
+                            <?php
+                            
+                            $id = mysqli_query($conn, "SELECT max(id_appoinment) as idTerbesar FROM tb_appoinment");
+                            $data  = mysqli_fetch_assoc($id);
+                            $idAppoinment = $data["idTerbesar"];
+    
+                            // Menganmbil angka dari kode terbesar dan dibuah menjadi int
+    
+                            $urutan = (int) substr($idAppoinment, -3);
+                            $urutan++;
+    
+                            // Membentuk kode baru
+    
+                            $huruf = "MDR";
+                            $idAppoinment = $huruf . sprintf("%03s", $urutan);
+                            
+                            ?>
+
+                            <input type="hidden" name="id" value="<?= $idAppoinment ?>">
                             <input type="hidden" name="nama" value="<?= $a ?>">
                             <input type="hidden" name="notelp" value="<?= $b ?>">
                             <input type="hidden" name="email" value="<?= $c ?>">
@@ -62,6 +81,26 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <?php
+                            
+                                $sql_2 = "SELECT * FROM tb_service";
+                                $query_2 = mysqli_query($conn, $sql_2);
+                                
+                            ?>
+
+                            <div class="col-12 col-md-12">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">SERVICE</label>
+                                    <select name="service" id="exampleInputPassword1" class="pr-3 select-control">
+                                        <option value="">PILIH SERVICE</option>
+                                        <?php foreach ($query_2 as $row_2) :  ?>
+                                            <option value="<?= $row_2['id_service'] ?>"><?= $row_2['nama'] ?> </option>
+                                        <?php endforeach;  ?>   
+                                    </select>
+                                </div>
+                            </div>
+
 
                             <div class="col-12 pt-3">
                                 <button type="submit" name="btn-submit" class="btn btn-primary mx-auto btn-block btn-lg">SUBMIT APPOINMENT</button>

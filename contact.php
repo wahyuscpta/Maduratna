@@ -26,10 +26,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml ml-auto">
-                    <a class="nav-item nav-link" href="about.html">About</a>
-                    <a class="nav-item nav-link" href="service.html">Services</a>
-                    <a class="nav-item nav-link" href="produk.html">Product</a>
-                    <a class="nav-item nav-link active" href="contact.html">Contact Us</a>
+                    <a class="nav-item nav-link" href="about.php">About</a>
+                    <a class="nav-item nav-link" href="service.php">Services</a>
+                    <a class="nav-item nav-link" href="produk.php">Product</a>
+                    <a class="nav-item nav-link active" href="contact.php">Contact Us</a>
                 </div>
                 </div>
             </div>
@@ -129,11 +129,11 @@
             <div class="col-xs-6 col-md-3 ml-lg-5 pl-lg-5">
                 <h6>Quick Links</h6>
                 <ul class="footer-links">
-                  <li><a href="">Home</a></li>
-                  <li><a href="">About</a></li>
-                  <li><a href="">Services</a></li>
-                  <li><a href="">Product</a></li>
-                  <li><a href="">Contact Us</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="about.php">About</a></li>
+                  <li><a href="service.php">Services</a></li>
+                  <li><a href="product.php">Product</a></li>
+                  <li><a href="contact.php">Contact Us</a></li>
                 </ul>
               </div>
   

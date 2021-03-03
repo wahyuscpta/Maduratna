@@ -7,8 +7,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/style.css?v<?= time() ?>">
+    <link rel="stylesheet" href="css/about.css?v<?= time() ?>">
     <title>Maduratna Barber Shop</title>
 </head>
 <body>
@@ -26,10 +26,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml ml-auto">
-                    <a class="nav-item nav-link active" href="about.html">About</a>
-                    <a class="nav-item nav-link" href="service.html">Services</a>
-                    <a class="nav-item nav-link" href="produk.html">Product</a>
-                    <a class="nav-item nav-link " href="contact.html">Contact Us</a>
+                    <a class="nav-item nav-link active" href="about.php">About</a>
+                    <a class="nav-item nav-link" href="service.php">Services</a>
+                    <a class="nav-item nav-link" href="produk.php">Product</a>
+                    <a class="nav-item nav-link " href="contact.php">Contact Us</a>
                 </div>
                 </div>
             </div>
@@ -138,8 +138,8 @@
                     </div>
                 </div>
 
-                <div class="col-12 mt-5 pt-5">
-                    <div class="staff" data-aos="fade-right">
+                <div class="col-12 mt-5 pt-5" data-aos="fade-up">
+                    <div class="staff">
                         <div class="row">
 
                             <div class="col-lg-2 col-md-12 col-sm-12">
@@ -162,7 +162,7 @@
 
                             <div class="col-lg-5 col-md-7 col-sm-12">
                                 <div class="desc-staff mt-sm-5">
-                                    <h2>STAFF NAME</h2>
+                                    <h2>JOHN ALEXANDER</h2>
                                     <p>Profesional Barber</p>
                                     <p class="text-justify"><i class="fas fa-quote-left pr-3"></i>Jangan ragu untuk datang kepada saya. Dengan pengalaman dan skill yang saya miliki tentunya menjadi jaminan bahwa anda akan puas melihat hasillnya. So, tunggu apa lagi saya tunggu kedatangan anda di Maduratna Barbershop.</p>
                                 </div>
@@ -172,13 +172,13 @@
                     </div>
                 </div>
 
-                <div class="col-12 mt-5 pt-5 mt-sm-2">
-                    <div class="staff" data-aos="fade-left">
+                <div class="col-12 mt-5 pt-5 mt-sm-2"  data-aos="fade-up">
+                    <div class="staff">
                         <div class="row">
 
                             <div class="col-lg-5 col-md-7 col-sm-12">
                                 <div class="desc-staff pt-4 text-right desc-first" style="margin-right: 0px;">
-                                    <h2>STAFF NAME</h2>
+                                    <h2>STEFFAN JULLE</h2>
                                     <p>Profesional Barber</p>
                                     <p class="text-justify"><i class="fas fa-quote-left pr-3"></i>Passion saya adalah mencukur. Seni saya adalah mencukur. Jadi anda tidak salah datang kepada saya karena tidak akan membiarkan customer kecewa. Percayakan kepada kami untuk semua permasalahan rambut anda.</p>
                                 </div>
@@ -212,8 +212,8 @@
                     </div>
                 </div>
 
-                <div class="col-12 mt-5 pt-5 mt-sm-2">
-                    <div class="staff" data-aos="fade-right">
+                <div class="col-12 mt-5 pt-5 mt-sm-2"  data-aos="fade-up">
+                    <div class="staff">
                         <div class="row">
 
                             <div class="col-lg-2 col-md-12 col-sm-12">
@@ -236,7 +236,7 @@
 
                             <div class="col-lg-5 col-md-7 col-sm-12">
                                 <div class="desc-staff mt-sm-5">
-                                    <h2>STAFF NAME</h2>
+                                    <h2>ALEXUNDER BRYAN</h2>
                                     <p>Profesional Barber</p>
                                     <p class="text-justify"><i class="fas fa-quote-left pr-2"></i>Sangat bangga bisa bergabung dengan Team Maduratna Barber Shop. Menurut saya memotong rambut adalah seni dan kanvas saya adalah rambut customer. Jadi saya siap memberikan pelayanan yang terbaik untuk kepuasan anda.</p>
                                 </div>
@@ -263,11 +263,11 @@
             <div class="col-xs-6 col-md-3 ml-lg-5 pl-lg-5">
                 <h6>Quick Links</h6>
                 <ul class="footer-links">
-                  <li><a href="">Home</a></li>
-                  <li><a href="">About</a></li>
-                  <li><a href="">Services</a></li>
-                  <li><a href="">Product</a></li>
-                  <li><a href="">Contact Us</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="about.php">About</a></li>
+                  <li><a href="service.php">Services</a></li>
+                  <li><a href="product.php">Product</a></li>
+                  <li><a href="contact.php">Contact Us</a></li>
                 </ul>
               </div>
   

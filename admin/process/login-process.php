@@ -25,7 +25,8 @@ if (isset($_POST['btn-login'])) {
 
                     session_start();
                     $_SESSION['username'] = $usn;	
-                    alert("Login Success", "../home/view.php");
+                    
+                    alert("Login Success", "../app/view.php");
 
                 } else {
                     alert("Sorry Login Failed", "../index.php");

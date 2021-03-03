@@ -3,8 +3,7 @@
     require_once "config/conn.php";
     require_once "config/helper.php";
 
-    $query = "SELECT tb_jam.jam, tb_jam.kategori, tb_jam.id_jam, tb_appoinment.id_jam FROM tb_jam, tb_appoinment WHERE tb_jam.id_jam != tb_appoinment.id_jam;";
-    $sql = mysqli_query($conn, $query);
+    $query = mysqli_query($conn, "SELECT * FROM tb_staff");
 
 ?>
 
@@ -17,7 +16,7 @@
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css?v=<?php time() ?>">
+    <link rel="stylesheet" href="css/style.css?v=<?= time() ?>">
     <title>Maduratna Barber Shop</title>
 </head>
 <body>
@@ -35,10 +34,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml ml-auto">
-                    <a class="nav-item nav-link" href="about.html">About</a>
-                    <a class="nav-item nav-link" href="service.html">Services</a>
-                    <a class="nav-item nav-link" href="produk.html">Product</a>
-                    <a class="nav-item nav-link " href="contact.html">Contact Us</a>
+                    <a class="nav-item nav-link" href="about.php">About</a>
+                    <a class="nav-item nav-link" href="service.php">Services</a>
+                    <a class="nav-item nav-link" href="produk.php">Product</a>
+                    <a class="nav-item nav-link " href="contact.php">Contact Us</a>
                 </div>
                 </div>
             </div>
@@ -194,37 +193,20 @@
                     </div>
                 </div>
 
+                <?php foreach($query as $row) : ?>
 
                 <div class="col-lg-4 col-sm-6 mt-5 mt-md-3" data-aos="fade-up">
                     <div class="card m-3">
-                        <img class="card-img-top" src="img/staff/1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="img/staff/<?=$row['gambar']?>" alt="Card image cap">
                         <div class="card-body">
-                          <h2 class="card-title">STAFF NAME</h2>
-                          <p class="card-text">Profesional Barber</p>
+                          <h2 class="card-title"><?=$row['nama']?></h2>
+                          <p class="card-text"><?= $row['job'] ?></p>
                         </div>
                       </div>
                 </div>
 
-                <div class="col-lg-4 col-sm-6 mt-5 mt-md-3" data-aos="fade-up">
-                    <div class="card m-3">
-                        <img class="card-img-top" src="img/staff/2.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h2 class="card-title">STAFF NAME</h2>
-                          <p class="card-text">Profesional Barber</p>
-                        </div>
-                      </div>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 mt-5 mt-md-3" data-aos="fade-up">
-                    <div class="card m-3">
-                        <img class="card-img-top" src="img/staff/3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h2 class="card-title">STAFF NAME</h2>
-                          <p class="card-text">Profesional Barber</p>
-                        </div>
-                      </div>
-                </div>
-
+                <?php endforeach; ?>
+                
             </div>
 
         </div>
@@ -345,14 +327,14 @@
 
     </div>
 
-    <div class="bg-produk mb-5">
+    <div class="bg-produk mb-5 pb-5">
         <img src="img/ripped/3.png" class="ripped img-fluid" alt="">
 
         <div class="container">
             <div class="row">
 
                 <div class="col-12">
-                    <div class="title-text text-center mb-5" data-aos="zoom-in">
+                    <div class="title-text text-center" data-aos="zoom-in">
                         <h4>PENGALAMAN DENGAN BARBERSHOP TERBAIK</h4>
                         <h1>kami menyediakan produk untuk membantu dalam menata rambut dimanapun dengan mudah</h1>
                     </div>
@@ -363,7 +345,7 @@
                         <img class="card-img-top" src="img/produk/pomade.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title text-center">OIL POMADE</h4>
-                          <h5 class="card-text text-center">50K</h5>
+                          <h5 class="card-text text-center">35K</h5>
                         </div>
                       </div>
                 </div>
@@ -383,7 +365,7 @@
                         <img class="card-img-top" src="img/produk/serum.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title text-center">HAIR SERUM</h4>
-                          <h5 class="card-text text-center">50K</h5>
+                          <h5 class="card-text text-center">75K</h5>
                         </div>
                       </div>
                 </div>
@@ -393,7 +375,7 @@
                         <img class="card-img-top" src="img/produk/shaver.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title text-center">HAIR SHAVER</h4>
-                          <h5 class="card-text text-center">50K</h5>
+                          <h5 class="card-text text-center">35K</h5>
                         </div>
                       </div>
                 </div>
@@ -469,11 +451,11 @@
             <div class="col-xs-6 col-md-3 ml-lg-5 pl-lg-5">
                 <h6>Quick Links</h6>
                 <ul class="footer-links">
-                  <li><a href="">Home</a></li>
-                  <li><a href="">About</a></li>
-                  <li><a href="">Services</a></li>
-                  <li><a href="">Product</a></li>
-                  <li><a href="">Contact Us</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="about.php">About</a></li>
+                  <li><a href="service.php">Services</a></li>
+                  <li><a href="product.php">Product</a></li>
+                  <li><a href="contact.php">Contact Us</a></li>
                 </ul>
               </div>
   

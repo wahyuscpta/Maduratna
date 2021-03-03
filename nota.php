@@ -21,7 +21,7 @@
     <title>Nawacare</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nota.css?v=<?php time() ?>">
+    <link rel="stylesheet" href="css/nota.css?v=<?= time() ?>">
 </head>
 <body>
 
@@ -71,7 +71,7 @@
 
         <hr>
 
-        <h5>MADURATNA BARBER SHOP</h5>
+        <h2><?= $row['id_appoinment'] ?></h2>
 
         <?php endforeach; ?>
 

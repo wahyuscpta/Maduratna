@@ -1,3 +1,13 @@
+<?php
+
+    require_once "config/conn.php";
+    require_once "config/helper.php";
+
+    $query = mysqli_query($conn, "SELECT * FROM tb_testimoni WHERE id_testi =11 ");
+
+    $query_2 = mysqli_query($conn, "SELECT * FROM tb_testimoni WHERE id_testi !=11 ");
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,8 +17,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/style.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="css/service.css?v=<?= time() ?>">
     <title>Maduratna Barber Shop</title>
 </head>
 <body>
@@ -26,10 +36,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml ml-auto">
-                    <a class="nav-item nav-link" href="about.html">About</a>
-                    <a class="nav-item nav-link active" href="service.html">Services</a>
-                    <a class="nav-item nav-link" href="produk.html">Product</a>
-                    <a class="nav-item nav-link " href="contact.html">Contact Us</a>
+                    <a class="nav-item nav-link" href="about.php">About</a>
+                    <a class="nav-item nav-link active" href="service.php">Services</a>
+                    <a class="nav-item nav-link" href="produk.php">Product</a>
+                    <a class="nav-item nav-link " href="contact.php">Contact Us</a>
                 </div>
                 </div>
             </div>
@@ -312,12 +322,16 @@
                     </div>
                 </div>
 
-                <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel" data-aos="fade-up">
+                <div id="carouselExampleControls" class="carousel slide mt-5" data-ride="carousel" data-aos="fade-up">
     
                     <div class="carousel-inner">
     
+                      <?php foreach ($query as $row) : ?>
+
                       <div class="carousel-item active">
-                        <div class="row">
+                          
+                          <div class="text-carousel">
+                            <div class="row">
 
                             <div class="col-2">
                                 <div class="icon-testi text-center mt-3">
@@ -327,7 +341,7 @@
 
                             <div class="col-8">
                                 <div class="text-testi text-center">
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam delectus beatae tempore laboriosam, est commodi reprehenderit laborum velit rem eos, nemo facilis atque suscipit, quas qui ipsa porro impedit cum!</p>       
+                                    <p><?= $row['testimoni'] ?></p>       
                                 </div>
                             </div>
 
@@ -339,15 +353,23 @@
 
                             <div class="col-12">
                                 <div class="name-testi text-center mt-5">
-                                    <h3>JOHN IN THE HOUSE</h3>
+                                    <h3 class="text-uppercase"><?= $row['nama'] ?></h3>
+                                </div>
+                            </div>
+
                                 </div>
                             </div>
                             
-                        </div>
                       </div>
 
-                      <div class="carousel-item">
-                        <div class="row">
+                      <?php endforeach; ?>
+
+                      <?php foreach ($query_2 as $row) : ?>
+
+                        <div class="carousel-item">
+                            
+                            <div class="text-carousel">
+                            <div class="row">
 
                             <div class="col-2">
                                 <div class="icon-testi text-center mt-3">
@@ -357,7 +379,7 @@
 
                             <div class="col-8">
                                 <div class="text-testi text-center">
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam delectus beatae tempore laboriosam, est commodi reprehenderit laborum velit rem eos, nemo facilis atque suscipit, quas qui ipsa porro impedit cum!</p>       
+                                    <p><?= $row['testimoni'] ?></p>       
                                 </div>
                             </div>
 
@@ -369,42 +391,16 @@
 
                             <div class="col-12">
                                 <div class="name-testi text-center mt-5">
-                                    <h3>JOHN IN THE HOUSE</h3>
+                                    <h3 class="text-uppercase"><?= $row['nama'] ?></h3>
+                                </div>
+                            </div>
+
                                 </div>
                             </div>
                             
                         </div>
-                      </div>
 
-                      <div class="carousel-item">
-                        <div class="row">
-
-                            <div class="col-2">
-                                <div class="icon-testi text-center mt-3">
-                                    <i class="fas fa-quote-left"></i>
-                                </div>
-                            </div>
-
-                            <div class="col-8">
-                                <div class="text-testi text-center">
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam delectus beatae tempore laboriosam, est commodi reprehenderit laborum velit rem eos, nemo facilis atque suscipit, quas qui ipsa porro impedit cum!</p>       
-                                </div>
-                            </div>
-
-                            <div class="col-2">
-                                <div class="icon-testi text-center mt-3">
-                                    <i class="fas fa-quote-right"></i>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="name-testi text-center mt-5">
-                                    <h3>JOHN IN THE HOUSE</h3>
-                                </div>
-                            </div>
-                            
-                        </div>
-                      </div>
+                        <?php endforeach; ?>
 
                     </div>
                 
@@ -425,11 +421,11 @@
             <div class="col-xs-6 col-md-3 ml-lg-5 pl-lg-5">
                 <h6>Quick Links</h6>
                 <ul class="footer-links">
-                  <li><a href="">Home</a></li>
-                  <li><a href="">About</a></li>
-                  <li><a href="">Services</a></li>
-                  <li><a href="">Product</a></li>
-                  <li><a href="">Contact Us</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="about.php">About</a></li>
+                  <li><a href="service.php">Services</a></li>
+                  <li><a href="product.php">Product</a></li>
+                  <li><a href="contact.php">Contact Us</a></li>
                 </ul>
               </div>
   

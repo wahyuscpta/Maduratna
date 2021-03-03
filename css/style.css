@@ -917,6 +917,15 @@ input:focus{
     .list::before{
         width: 40%;
     }
+    .bg-staff{
+        margin-top: -150px !important;
+    }
+    .bg-pricelist{
+        margin-top: -150px;
+    }
+    .bg-produk{
+        margin-top: -150px;
+    }
 }
 
 @media (max-width: 375px){

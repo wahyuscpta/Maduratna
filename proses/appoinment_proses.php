@@ -18,13 +18,15 @@
 
     if (isset($_POST['btn-submit'])) {
 
+            $id = $_POST['id'];
             $a = $_POST['nama'];
             $b = $_POST['notelp'];
             $c = $_POST['email'];
             $d = $_POST['tanggal'];
             $e = $_POST['jam'];
+            $f = $_POST['service'];
 
-            $sql   = "INSERT INTO tb_appoinment VALUES ('', '$a', '$b', '$c', '$d', '$e') ";
+            $sql   = "INSERT INTO tb_appoinment VALUES ('$id', '$a', '$b', '$c', '$d', '$e', '$f') ";
             $query = mysqli_query($conn, $sql); 
 
             if($query){

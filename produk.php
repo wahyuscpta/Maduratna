@@ -1,3 +1,15 @@
+<?php
+
+    require_once "config/conn.php";
+    require_once "config/helper.php";
+
+    $query = mysqli_query($conn, "SELECT * FROM tb_produk WHERE id_produk = 4 ");
+
+    $query_2 = mysqli_query($conn, "SELECT * FROM tb_produk WHERE id_produk != 4");
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,8 +19,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/produk.css">
+    <link rel="stylesheet" href="css/style.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="css/produk.css?v=<?= time() ?>">
     <title>Maduratna Barber Shop</title>
 </head>
 <body>
@@ -26,10 +38,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml ml-auto">
-                    <a class="nav-item nav-link" href="about.html">About</a>
-                    <a class="nav-item nav-link" href="service.html">Services</a>
-                    <a class="nav-item nav-link active" href="produk.html">Product</a>
-                    <a class="nav-item nav-link " href="contact.html">Contact Us</a>
+                    <a class="nav-item nav-link" href="about.php">About</a>
+                    <a class="nav-item nav-link" href="service.php">Services</a>
+                    <a class="nav-item nav-link active" href="produk.php">Product</a>
+                    <a class="nav-item nav-link " href="contact.php">Contact Us</a>
                 </div>
                 </div>
             </div>
@@ -59,277 +71,153 @@
 
                 <div class="carousel-inner">
 
-                  <div class="carousel-item active">
-                    <div class="row">
+                    <?php foreach ($query as $row) : ?>
 
-                        <div class="col-lg-6 col-12 col-md-6">
-                            <div class="img-about">
-                                <img src="img/detail/hairspray.jpg" alt="">
-                            </div>
-                        </div>
-        
-                        <div class="col-lg-6 col-12 col-md-6">
+                    <div class="carousel-item active">
+                      <div class="row">
 
-                            <div class="text-detail">
-                                
-                            <p class="mt-3">PRODUCTS</p>
+                          <div class="col-lg-6 col-12 col-md-6">
+                              <div class="img-about">
+                                  <img src="img/detail/<?= $row['gambar'] ?>" alt="">
+                              </div>
+                          </div>
 
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-angle-left"></i></span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-angle-right"></i></span>
-                                <span class="sr-only">Next</span>
-                              </a>
+                          <div class="col-lg-6 col-12 col-md-6">
 
-                              <hr class="mt-lg-3">
+                              <div class="text-detail">
+                                  
+                              <p class="mt-3">PRODUCTS</p>
 
-                            <div class="text-about">
-                                <h1 class="mt-sm-3">MADURATNA HAIRSPRAY</h1>
-                                <div class="rate">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <p class="mt-5">Maduratna Hair Serum adalah sebuah produk inovasi dalam dunia styling rambut pria. Membentuk rambut sesuai keinginan dan mempertahankan kerapian model rambut Anda sepanjang hari.Rambut yang ditata tidak mudah berubah.
-                                </p>
-   
-                                <div class="features">
-                                    <h3 class="mt-5">SPECIALS FEATURES :</h3>
-                                    <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <i class="fas fa-check"></i>Styling dengan cepat dan mudah
-                                        </li>
-                                        <li class="list-group-item">
-                                              <i class="fas fa-check"></i>Mudah disisir
-                                        </li>
-                                        <li class="list-group-item">
-                                            <i class="fas fa-check"></i>Menjaga kelembaban rambut
-                                        </li>
-                                      </ul>    
-                                </div>
-                                
-                                  <div class="row mt-5">
-                                    <div class="col-3">
-                                        <h1 class="mt-lg-3 mt-md-3">$100K</h1>
-                                    </div>
+                              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-angle-left"></i></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-angle-right"></i></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
 
-                                      <div class="col-lg-4 col-md-5 col-8">
-                                        <a href="" class="btn btn-danger mt-lg-3 mt-md-3 btn-block">BELI PRODUK</a>
-                                      </div>
+                                <hr class="mt-lg-3">
+
+                              <div class="text-about">
+                                  <h1 class="mt-sm-3 text-uppercase"><?= $row['nama_produk'] ?></h1>
+                                  <div class="rate">
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star-half-alt"></i>
                                   </div>
+                                  <p class="mt-5"><?= $row['desc_produk'] ?></p>
 
-                            </div>
-                            </div>
-
-                        </div>
-        
-                    </div>
-                  </div>
-
-                  <div class="carousel-item ">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12 col-md-6">
-                            <div class="img-about">
-                                <img src="img/detail/pomade.jpg" alt="">
-                            </div>
-                        </div>
-        
-                        <div class="col-lg-6 col-12 col-md-6">
-                            <div class="text-detail">
-                                <p class="mt-3">PRODUCTS</p>
-
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-angle-left"></i></span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-angle-right"></i></span>
-                                <span class="sr-only">Next</span>
-                              </a>
-
-                              <hr class="mt-lg-3">
-
-                            <div class="text-about">
-                                <h1 class="mt-sm-3">OIL BASED POMADE</h1>
-                                <div class="rate">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <p class="mt-5">Maduratna Oil Based Pomade merupakan Produk penata rambut yang diperuntukan bagi kalian yang suka dengan penampilan rambut yang terlihat natural, dengan Hold yang kuat, mudah diatur dan dapat membantu memberikan tekstur serta volume pada rambut</p>
-
-                                <div class="features">
-                                    <h3 class="mt-5">SPECIALS FEATURES :</h3>
-                                    <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <i class="fas fa-check"></i>Cocok untuk semua jenis rambut
-                                        </li>
-                                        <li class="list-group-item">
-                                            <i class="fas fa-check"></i>Mudah disisir ulang
-                                        </li>
-                                        <li class="list-group-item">
-                                            <i class="fas fa-check"></i>Mengandung Aloe Vera
-                                        </li>
-                                      </ul>    
-                                </div>
-                                
-                                  <div class="row mt-5">
-                                    <div class="col-3">
-                                        <h1 class="mt-lg-3 mt-md-3">$100K</h1>
-                                    </div>
-
-                                      <div class="col-lg-4 col-md-5 col-8">
-                                        <a href="" class="btn btn-danger mt-lg-3 mt-md-3 btn-block">BELI PRODUK</a>
-                                      </div>
+                                  <div class="features">
+                                      <h3 class="mt-5">SPECIALS FEATURES :</h3>
+                                      <ul class="list-group">
+                                          <li class="list-group-item">
+                                              <i class="fas fa-check"></i><?= $row['fitur_1'] ?>
+                                          </li>
+                                          <li class="list-group-item">
+                                                <i class="fas fa-check"></i><?= $row['fitur_2'] ?>
+                                          </li>
+                                          <li class="list-group-item">
+                                              <i class="fas fa-check"></i><?= $row['fitur_3'] ?>
+                                          </li>
+                                        </ul>    
                                   </div>
+                                  
+                                    <div class="row mt-5">
+                                      <div class="col-3">
+                                          <h1 class="mt-lg-3 mt-md-3">RP.<?= $row['harga'] ?></h1>
+                                      </div>
 
-                            </div>
-                            </div>
-                        </div>
-        
-                    </div>
-                  </div>
-
-                  <div class="carousel-item ">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12 col-md-6">
-                            <div class="img-about">
-                                <img src="img/detail/serum.jpg" alt="">
-                            </div>
-                        </div>
-        
-                        <div class="col-lg-6 col-12 col-md-6">
-                            <div class="text-detail">
-                                <p class="mt-3">PRODUCTS</p>
-
-                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-angle-left"></i></span>
-                                    <span class="sr-only">Previous</span>
-                                  </a>
-                                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-angle-right"></i></span>
-                                    <span class="sr-only">Next</span>
-                                  </a>
-    
-                                  <hr class="mt-lg-3">
-    
-                                <div class="text-about">
-                                    <h1 class="mt-sm-3">MADURATNA HAIR SERUM</h1>
-                                    <div class="rate">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                    <p class="mt-5">Maduratna Hair Serum adalah sebuah produk inovasi dalam dunia styling rambut pria. Dengan kandungan ALOE VERA dapat membuat rambut anda tetap sehat. Memberikan TEKSTUR pada rambut dan membuat rambut lebih mengembang sepanjang hari.</p>
-    
-                                    <div class="features">
-                                        <h3 class="mt-5">SPECIALS FEATURES :</h3>
-                                        <ul class="list-group">
-                                            <li class="list-group-item">
-                                                <i class="fas fa-check"></i>Mengandung Aloe Vera
-                                            </li>
-                                            <li class="list-group-item">
-                                                <i class="fas fa-check"></i>Mudah Digunakan
-                                            </li>
-                                            <li class="list-group-item">
-                                                <i class="fas fa-check"></i>Tidak mengandung bahan kimia
-                                            </li>
-                                          </ul>    
-                                    </div>
-                                    
-                                      <div class="row mt-5">
-                                        <div class="col-3">
-                                            <h1 class="mt-lg-3 mt-md-3">$100K</h1>
+                                        <div class="col-lg-4 col-md-5 col-8">
+                                          <a href="" class="btn btn-danger mt-lg-3 mt-md-3 btn-block">BELI PRODUK</a>
                                         </div>
-    
-                                          <div class="col-lg-4 col-md-5 col-8">
-                                            <a href="" class="btn btn-danger mt-lg-3 mt-md-3 btn-block">BELI PRODUK</a>
-                                          </div>
-                                      </div>
-    
-                                </div>
-                            </div>
-                        </div>
-        
-                    </div>
-                  </div>
-
-                  <div class="carousel-item">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12 col-md-6">
-                            <div class="img-about">
-                                <img src="img/detail/shaver.jpg" alt="">
-                            </div>
-                        </div>
-        
-                        <div class="col-lg-6 col-12 col-md-6">
-                            <div class="text-detail">
-                                <p class="mt-3">PRODUCTS</p>
-
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-angle-left"></i></span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-angle-right"></i></span>
-                                <span class="sr-only">Next</span>
-                              </a>
-
-                              <hr class="mt-lg-3">
-
-                            <div class="text-about">
-                                <h1 class="mt-sm-3">HAIR SHAVER KNIFE</h1>
-                                <div class="rate">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <p class="mt-5">Bagi para pria yang setiap hari mencukur jenggot dan kumis wajib untuk memiliki pisau cukur lipat ini. Anda dapat mencukur jenggot dengan lebih rapi seperti layaknya pencukur profesional di salon dan tempat pangkas rambut. Gagang yang nyaman dan mata silet yang tajam membuat mencukur lebih mudah.</p>
-                                
-                                <div class="features">
-                                    <h3 class="mt-5">SPECIALS FEATURES :</h3>
-                                    <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <i class="fas fa-check"></i>Berbahan Stainless Stell
-                                        </li>
-                                        <li class="list-group-item">
-                                            <i class="fas fa-check"></i>Nyaman digenggam
-                                        </li>
-                                        <li class="list-group-item">
-                                            <i class="fas fa-check"></i>Mudah dibawa kemanapun
-                                        </li>
-                                      </ul>    
-                                </div>
-                            
-                                  <div class="row mt-5">
-                                    <div class="col-3">
-                                        <h1 class="mt-lg-3 mt-md-3">$100K</h1>
                                     </div>
 
-                                      <div class="col-lg-4 col-md-5 col-8">
-                                        <a href="" class="btn btn-danger mt-lg-3 mt-md-3 btn-block">BELI PRODUK</a>
-                                      </div>
-                                  </div>
+                              </div>
+                              </div>
 
-                            </div>
-                            </div>
-                        </div>
-        
+                          </div>
+
+                      </div>
                     </div>
-                  </div>
+
+                    <?php endforeach; ?>
+
+                    <?php foreach ($query_2 as $row) : ?>
+
+                    <div class="carousel-item">
+                      <div class="row">
+
+                          <div class="col-lg-6 col-12 col-md-6">
+                              <div class="img-about">
+                                  <img src="img/detail/<?= $row['gambar'] ?>" alt="">
+                              </div>
+                          </div>
+
+                          <div class="col-lg-6 col-12 col-md-6">
+
+                              <div class="text-detail">
+                                  
+                              <p class="mt-3">PRODUCTS</p>
+
+                              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-angle-left"></i></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-angle-right"></i></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+
+                                <hr class="mt-lg-3">
+
+                              <div class="text-about">
+                                  <h1 class="mt-sm-3 text-uppercase"><?= $row['nama_produk'] ?></h1>
+                                  <div class="rate">
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star-half-alt"></i>
+                                  </div>
+                                  <p class="mt-5"><?= $row['desc_produk'] ?></p>
+
+                                  <div class="features">
+                                      <h3 class="mt-5">SPECIALS FEATURES :</h3>
+                                      <ul class="list-group">
+                                          <li class="list-group-item">
+                                              <i class="fas fa-check"></i><?= $row['fitur_1'] ?>
+                                          </li>
+                                          <li class="list-group-item">
+                                                <i class="fas fa-check"></i><?= $row['fitur_2'] ?>
+                                          </li>
+                                          <li class="list-group-item">
+                                              <i class="fas fa-check"></i><?= $row['fitur_3'] ?>
+                                          </li>
+                                        </ul>    
+                                  </div>
+                                  
+                                    <div class="row mt-5">
+                                      <div class="col-3">
+                                          <h1 class="mt-lg-3 mt-md-3">RP.<?= $row['harga'] ?></h1>
+                                      </div>
+
+                                        <div class="col-lg-4 col-md-5 col-8">
+                                          <a href="" class="btn btn-danger mt-lg-3 mt-md-3 btn-block">BELI PRODUK</a>
+                                        </div>
+                                    </div>
+
+                              </div>
+                              </div>
+
+                          </div>
+
+                      </div>
+                    </div>
+
+                    <?php endforeach; ?>
 
                 </div>
 
@@ -355,8 +243,8 @@
                     <div class="card m-3 produk" data-aos="zoom-in">
                         <img class="card-img-top" src="img/produk/pomade.jpg" alt="Card image cap">
                         <div class="card-body">
-                          <h4 class="card-title text-center">OIL BASED POMADE</h4>
-                          <h5 class="card-text text-center">50K</h5>
+                          <h4 class="card-title text-center">OIL POMADE</h4>
+                          <h5 class="card-text text-center">35K</h5>
                         </div>
                       </div>
                 </div>
@@ -376,7 +264,7 @@
                         <img class="card-img-top" src="img/produk/serum.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title text-center">HAIR SERUM</h4>
-                          <h5 class="card-text text-center">50K</h5>
+                          <h5 class="card-text text-center">75K</h5>
                         </div>
                       </div>
                 </div>
@@ -386,7 +274,7 @@
                         <img class="card-img-top" src="img/produk/shaver.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title text-center">HAIR SHAVER</h4>
-                          <h5 class="card-text text-center">50K</h5>
+                          <h5 class="card-text text-center">35K</h5>
                         </div>
                       </div>
                 </div>
@@ -406,15 +294,15 @@
           </div>
 
           <div class="col-xs-6 col-md-3 ml-lg-5 pl-lg-5">
-              <h6>Quick Links</h6>
-              <ul class="footer-links">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Product</a></li>
-                <li><a href="">Contact Us</a></li>
-              </ul>
-            </div>
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="about.php">About</a></li>
+                  <li><a href="service.php">Services</a></li>
+                  <li><a href="product.php">Product</a></li>
+                  <li><a href="contact.php">Contact Us</a></li>
+                </ul>
+              </div>
 
           <div class="col-xs-6 col-md-2">
             <h6>Our Info</h6>
