@@ -22,11 +22,11 @@
     $query = mysqli_query($conn, "UPDATE tb_produk set nama_produk = '$b', harga='$c', desc_produk='$d', fitur_1='$e', fitur_2='$f', fitur_3='$g' WHERE id_produk = '$id' ");
 
     if($query){
-        alert("Success to changed", "../view.php");
+        header("location:../view.php?pesan=update");
     }
 
     else{
-        alert("Failed to edit data", "../view.php");
+        header("location:../view.php?pesan=error");
     }
 
 ?>

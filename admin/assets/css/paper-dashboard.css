@@ -20,9 +20,29 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 
 Copyright (c) 2015 Daniel Eden
 */
-.card-user{
-  box-shadow: none;
+.modal .card-user{
+  box-shadow: none !important;
 }
+
+.author a{
+  text-decoration: none !important;
+}
+
+.card-user .avatar {
+  border-radius: 10px !important;
+  width: 200px !important;
+  height: 250px !important;
+  margin-bottom: 15px !important;
+}
+
+.card-user .image{
+  height: 100px !important;
+}
+
+.card-user .description{
+  margin-bottom: 40px;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

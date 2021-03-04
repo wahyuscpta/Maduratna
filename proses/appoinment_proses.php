@@ -3,8 +3,6 @@
     include "../config/conn.php";
     require_once "../config/helper.php";
 
-    if (!isset($_POST['btn-submit'])) { header("location: ../index.php"); }
-
     if (isset($_POST['btn-next'])) {
 
         $a = $_POST['nama'];
@@ -12,7 +10,13 @@
         $c = $_POST['email'];
         $d = $_POST['tgl'];
 
-        header("location: ../appoinment.php?nama=$a&notelp=$b&email=$c&tgl=$d");
+        $tgl_skrg = date('Y-m-d');
+
+        if ($d === $tgl_skrg){
+            alert('Anda Harus Booking Maksimal H-1', '../index.php');
+        } else {
+            header("location: ../appoinment.php?nama=$a&notelp=$b&email=$c&tgl=$d");   
+        }
 
     }
 
@@ -36,7 +40,8 @@
                 $query_2 = mysqli_fetch_assoc($sql_2);
                 $_SESSION['id_appoinment'] = $query_2['id_appoinment'];
 
-                alert('Perjanjian Berhasil Dibuat', '../nota.php');
+                header("location: ../nota.php");   
+                
             } else {
                 alert('Perjanjian Gagal Dibuat', '../index.php');
             }

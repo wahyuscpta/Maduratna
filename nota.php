@@ -18,7 +18,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nawacare</title>
+    <title>Maduratna Barber Shop</title>
+    <link rel="shortcut icon" href="img/logo-2.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nota.css?v=<?= time() ?>">
@@ -30,6 +31,11 @@
     <div class="nota" id="capture">
 
         <?php foreach($sql as $row) : ?>
+
+            
+        <h2 class="text-center"><?= $row['id_appoinment'] ?></h2>
+
+        <hr>
         
         <table cellpadding="3">
             <tr>
@@ -69,14 +75,21 @@
             </tr>
         </table>
 
-        <hr>
-
-        <h2><?= $row['id_appoinment'] ?></h2>
+        <?php
+            $id_service = $row['id_service'];
+            $sql_3 = "SELECT * FROM tb_service WHERE id_service='$id_service' ";
+            $query_3 = mysqli_query($conn, $sql_3);
+            $service = mysqli_fetch_assoc($query_3);
+        ?>
+        
+        <div class="service">
+            <h2 class="text-center"><?= $service['nama'] ?></h2>
+            <p>RP.<?= $service['harga'] ?></p>
+        </div>
 
         <?php endforeach; ?>
 
         <p>NB: If you cannot attend the date of the agreement there must be a family representative to confirm the cancellation to our call center.</p>
-        <p>Polyclinic opens at 8:00 a.m. Please come earlier.</p>
 
         <hr>
 
@@ -86,7 +99,7 @@
 
     <div class="btn-nota">
         <a href="index.php" class="btn btn-secondary w-50">Back To Home</a>
-        <a href="pdf.php" class="btn btn-success tombol tombol-2 print">Save</a>
+        <a href="" onclick="printContent('capture')" class="btn btn-success tombol tombol-2 print">Save</a>
     </div>
 
 </div>
@@ -96,3 +109,13 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+<script>
+    function printContent(el){
+        var restorePage = document.body.innerHTML;
+        var printContent = document.getElementById(el).innerHTML;
+        document.body.innerHTML = printContent;
+        window.print();
+        document.body.innerHTML = restorePage;
+    }
+</script>

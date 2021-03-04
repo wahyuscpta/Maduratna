@@ -25,8 +25,8 @@
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css?v=<?php time() ?>">
-    <link rel="stylesheet" href="css/appoinment.css?v=<?php time() ?>">
+    <link rel="stylesheet" href="css/style.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="css/appoinment.css?v=<?= time() ?>">
     <title>Maduratna Barber Shop</title>
 </head>
 <body>
@@ -73,7 +73,7 @@
                             <div class="col-12 col-md-12">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">JAM</label>
-                                    <select name="jam" id="exampleInputPassword1" class="pr-3 select-control">
+                                    <select name="jam" id="exampleInputPassword1" class="pr-3 select-control" required>
                                         <option value="">PILIH JAM</option>
                                         <?php foreach ($query as $row) :  ?>
                                             <option value="<?= $row['id_jam'] ?>"><?= $row['jam'] ?> <?= $row['kategori'] ?></option>
@@ -92,15 +92,14 @@
                             <div class="col-12 col-md-12">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">SERVICE</label>
-                                    <select name="service" id="exampleInputPassword1" class="pr-3 select-control">
-                                        <option value="">PILIH SERVICE</option>
+                                    <select name="service" id="exampleInputPassword1" class="pr-3 select-control" required>
+                                        <option value="" >PILIH SERVICE</option>
                                         <?php foreach ($query_2 as $row_2) :  ?>
                                             <option value="<?= $row_2['id_service'] ?>"><?= $row_2['nama'] ?> </option>
                                         <?php endforeach;  ?>   
                                     </select>
                                 </div>
                             </div>
-
 
                             <div class="col-12 pt-3">
                                 <button type="submit" name="btn-submit" class="btn btn-primary mx-auto btn-block btn-lg">SUBMIT APPOINMENT</button>
@@ -116,7 +115,7 @@
 
                     <div class="nota" id="capture">
 
-                        <h1>Detail Appoinment</h1>
+                        <h1><?= $idAppoinment ?></h1>
 
                         <hr>
                         
@@ -145,8 +144,7 @@
 
                         </table>
 
-                        <p>NB: If you cannot attend the date of the agreement there must be a family representative to confirm the cancellation to our call center.</p>
-                        <p>Polyclinic opens at 8:00 a.m. Please come earlier.</p>
+                        <p>Untuk pembatalan, harap hubungi kami minimal 3 jam sebelumnya. Mohon hormati Staff kami dan Pelanggan Lainnya.</p> 
 
                         <hr>
 

@@ -72,6 +72,13 @@
               <p>Produk</p>
             </a>
           </li>
+                    
+          <li>
+            <a href="../service/view.php">
+            <i class="nc-icon nc-scissors"></i>
+              <p>Services</p>
+            </a>
+          </li>
 
           <li>
             <a href="../staff/view.php">
@@ -95,7 +102,7 @@
           </li>
 
           <li class="active-pro">
-            <a href="logout.php">
+          <a href="../process/logout.php">
               <i class="nc-icon nc-button-power"></i>
               <p>Logout</p>
             </a>
@@ -236,7 +243,7 @@
 
                         <tbody align="center">
                             <td><?= $i++; ?></td>
-                            <td><img src="gambar/<?= $sql['gambar'] ?>" alt=""></td>
+                            <td class="p-5"><img src="gambar/<?= $sql['gambar'] ?>" alt="" width="500"></td>
                             <td><?= $sql['nama_produk'] ?></td>
                             <td class="text-justify"><?= $sql['desc_produk'] ?></td>
                             <td><?= $sql['harga'] ?></td>

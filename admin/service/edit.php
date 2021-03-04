@@ -10,7 +10,7 @@
 
     if(!isset($id)) {header('location: view.php');}
 
-    $query = mysqli_query($conn, "SELECT * FROM tb_appoinment WHERE id_appoinment = '$id' ");
+    $query = mysqli_query($conn, "SELECT * FROM tb_service WHERE id_service = '$id' ");
 
 ?>
 
@@ -51,10 +51,11 @@
           Dashboard
         </a>
       </div>
+
     <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="active">
-            <a href="view.php">
+          <li>
+            <a href="../app/view.php">
               <i class="nc-icon nc-calendar-60"></i>
               <p>APPOINMENT</p>
             </a>
@@ -66,9 +67,9 @@
               <p>Produk</p>
             </a>
           </li>
-          
+                    
           <li>
-            <a href="../service/view.php">
+            <a href="view.php">
             <i class="nc-icon nc-scissors"></i>
               <p>Services</p>
             </a>
@@ -104,6 +105,7 @@
 
         </ul>
       </div>
+
   </div>
 
   <div class="main-panel">
@@ -118,7 +120,7 @@
               <span class="navbar-toggler-bar bar3"></span>
             </button>
           </div>
-          <a class="navbar-brand" href="">EDIT DATA APPOINMENT</a>
+          <a class="navbar-brand" href="">EDIT DATA PRODUK</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -145,82 +147,46 @@
             <div class="card card-user">
 
               <div class="card-body">
-                    <form action="process/edit-process.php" method="POST">
 
-                      <?php foreach($query as $sql) :?>
+                <?php foreach($query as $sql) : ?>
 
-                      <input type="hidden" name="id" value="<?=$sql['id_appoinment']?>">
+                <form action="process/edit-process.php" method="POST" enctype="multipart/form-data">
 
-                      <div class="row">
-                        <div class="col-md-5 pr-1">
-                          <div class="form-group">
-                            <label>Nama</label>
-                            <input type="text" name="nama" class="form-control" placeholder="Nama" value="<?=$sql['nama']?>">
-                          </div>
-                        </div>
+                        <input type="hidden" name="id" value="<?=$sql['id_service']?>">
 
-                        <div class="col-md-3 px-1">
-                          <div class="form-group">
-                            <label>No Telp</label>
-                            <input type="number" name="notelp" class="form-control" placeholder="Email" value="<?=$sql['notelp']?>">
-                          </div>
-                        </div>
-
-                        <div class="col-md-4 pl-1">
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="No Telepon"value="<?=$sql['email']?>">
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div class="row">
+                        <div class="row">
                         <div class="col-md-6 pr-1">
-                          <div class="form-group">
-                            <label>Tanggal</label>
-                            <input type="date" name="tanggal" class="form-control" placeholder="Tanggal" value="<?=$sql['tanggal']?>">
-                          </div>
+                            <div class="form-group">
+                            <label>Nama Produk</label>
+                            <input type="text" name="nama" class="form-control" placeholder="Nama Produk" value="<?= $sql['nama'] ?>">
+                            </div>
                         </div>
 
-                        <?php
-
-                            $tgl = $sql['tanggal'];
-                            $jam = "SELECT * FROM tb_jam WHERE id_jam NOT IN (SELECT id_jam FROM tb_appoinment WHERE tanggal='$tgl' )";
-                            $query = mysqli_query($conn, $jam);
-
-                            ?>
-
-                            <?php
-
-                            $id_jam = $sql['id_jam'];
-                            $jam_2  = "SELECT * FROM tb_jam WHERE id_jam='$id_jam'";
-                            $query_2 = mysqli_query($conn, $jam_2);
-                            $fetch = mysqli_fetch_assoc($query_2);
-
-                        ?>
-                        
-                        <div class="col-md-6 pl-1">
-                          <div class="form-group">
-                            <label>Confrankert</label>
-                            <select name="jam" class="pr-3 form-control">
-                                <option value="<?= $sql['id_jam'] ?>"><?= $fetch['jam'] ?> <?= $fetch['kategori'] ?> </option>
-                                <?php foreach ($query as $row) :  ?>
-                                <option value="<?= $row['id_jam'] ?>"><?= $row['jam'] ?> <?= $row['kategori'] ?></option>
-                                <?php endforeach;  ?>   
-                            </select>
-                          </div>
+                        <div class="col-md-6 px-1">
+                            <div class="form-group">
+                            <label>Harga</label>
+                            <input type="number" name="harga" class="form-control" placeholder="Harga" value="<?= $sql['harga'] ?>">
+                            </div>
                         </div>
-                      </div>
-                      
-                      <div class="row">
-                        <div class="create ml-auto mr-auto">
-                          <button type="submit" class="btn btn-primary">UPDATE Data</button>
                         </div>
-                      </div>
 
-                      <?php endforeach; ?>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                <label>Deskripsi Service</label>
+                                <input class="form-control textarea" name="desc" placeholder="Deskripsi" value="<?= $sql['desc_service'] ?>">
+                                </div>
+                            </div>
+                        </div>
 
-                    </form>
+                        <div class="row">
+                            <div class="create ml-auto mr-auto">
+                                <button type="submit" class="btn btn-primary">Update Data</button>
+                            </div>
+                        </div>
+                </form>
+
+                <?php endforeach;?>
 
             </div>
           </div>

@@ -29,7 +29,7 @@
 
         <nav class="navbar navbar-expand-lg fixed-top primary-nav">
             <div class="container container-md">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <img src="img/logo.png" width="100" height="100" class="d-inline-block align-top logo-1" alt="">
                     <img src="img/logo-2.png" width="100" height="100" class="d-inline-block align-top logo-2" alt="">
                   </a>
@@ -131,7 +131,7 @@
                                       </div>
 
                                         <div class="col-lg-4 col-md-5 col-8">
-                                          <a href="" class="btn btn-danger mt-lg-3 mt-md-3 btn-block">BELI PRODUK</a>
+                                          <a href="https://api.whatsapp.com/send?phone=6281932273428" class="btn btn-danger mt-lg-3 mt-md-3 btn-block">BELI PRODUK</a>
                                         </div>
                                     </div>
 
@@ -205,7 +205,7 @@
                                       </div>
 
                                         <div class="col-lg-4 col-md-5 col-8">
-                                          <a href="" class="btn btn-danger mt-lg-3 mt-md-3 btn-block">BELI PRODUK</a>
+                                          <a href="https://api.whatsapp.com/send?phone=6281932273428" class="btn btn-danger mt-lg-3 mt-md-3 btn-block">BELI PRODUK</a>
                                         </div>
                                     </div>
 
@@ -239,17 +239,20 @@
                   </div>
               </div>
 
-                <div class="col-12 col-md-6 col-lg-3 mt-5">
-                    <div class="card m-3 produk" data-aos="zoom-in">
-                        <img class="card-img-top" src="img/produk/pomade.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title text-center">OIL POMADE</h4>
-                          <h5 class="card-text text-center">35K</h5>
-                        </div>
+                      <div class="col-12 col-md-6 col-lg-3 mt-5">
+                        <a href="https://api.whatsapp.com/send?phone=6281932273428">
+                          <div class="card m-3 produk" data-aos="zoom-in">
+                              <img class="card-img-top" src="img/produk/pomade.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <h4 class="card-title text-center">OIL POMADE</h4>
+                                <h5 class="card-text text-center">35K</h5>
+                              </div>
+                            </div>
+                          </a>
                       </div>
-                </div>
 
                 <div class="col-12 col-md-6 col-lg-3 mt-5">
+                  <a href="https://api.whatsapp.com/send?phone=6281932273428">
                     <div class="card m-3 produk" data-aos="zoom-in">
                         <img class="card-img-top" src="img/produk/hairspray.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -257,9 +260,11 @@
                           <h5 class="card-text text-center">50K</h5>
                         </div>
                       </div>
+                    </a>
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3 mt-5">
+                  <a href="https://api.whatsapp.com/send?phone=6281932273428">
                     <div class="card m-3 produk" data-aos="zoom-in">
                         <img class="card-img-top" src="img/produk/serum.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -267,9 +272,11 @@
                           <h5 class="card-text text-center">75K</h5>
                         </div>
                       </div>
+                    </a>
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3 mt-5">
+                  <a href="https://api.whatsapp.com/send?phone=6281932273428">
                     <div class="card m-3 produk" data-aos="zoom-in">
                         <img class="card-img-top" src="img/produk/shaver.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -277,6 +284,7 @@
                           <h5 class="card-text text-center">35K</h5>
                         </div>
                       </div>
+                    </a>
                 </div>
                 
 

@@ -13,11 +13,11 @@
     $query = mysqli_query($conn, "INSERT INTO tb_staff VALUES ('', '$b', '$c', '$d', '$a')");
 
     if($query){
-        alert("Success to add Staff", "../view.php");
+        header("location:../view.php?pesan=input");
     }
 
     else{
-        alert("Failed to add Staff", "../view.php");
+        header("location:../view.php?pesan=error");
     }
 
 ?>

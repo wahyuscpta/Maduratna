@@ -76,6 +76,13 @@
           </li>
 
           <li>
+            <a href="../service/view.php">
+            <i class="nc-icon nc-scissors"></i>
+              <p>Services</p>
+            </a>
+          </li>
+
+          <li>
             <a href="../staff/view.php">
               <i class="nc-icon nc-single-02"></i>
               <p>Staff</p>
@@ -97,7 +104,7 @@
           </li>
 
           <li class="active-pro">
-            <a href="logout.php">
+            <a href="../process/logout.php">
               <i class="nc-icon nc-button-power"></i>
               <p>Logout</p>
             </a>
@@ -127,7 +134,7 @@
             <span class="navbar-toggler-bar navbar-kebab"></span>
           </button>
 
-          <form action="" method="POST">
+          <form action="" method="GET">
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
 
                 <div class="input-group no-border">
@@ -157,7 +164,7 @@
                 <div class="row">
 
                   <div class="col-6">
-                    <a href="nota.php?tgl=<?= $d ?>" class="btn btn-outline-primary"><i class="nc-icon nc-cloud-download-93 mr-2"></i>PRINT</a>
+                    <a href="nota.php" class="btn btn-primary"><i class="nc-icon nc-cloud-download-93 mr-2"></i>PRINT</a>
                   </div>
                   
                   <div class="col-6">
@@ -233,12 +240,17 @@
                             <td>Email</td>
                             <td>Tanggal</td>
                             <td>Jam</td>
+                            <td>Service</td>
                             <td>Aksi</td>
                         </th>
 
                         <?php   
                             $i = 1;   
                             foreach ($query as $sql) : 
+
+                            $id_service = $sql['id_service'];
+                            $sql_3 = mysqli_query($conn, "SELECT * FROM tb_service WHERE id_service = '$id_service' ");
+                            $query_3 = mysqli_fetch_assoc($sql_3);
                         ?>
 
                         <tbody align="center">
@@ -257,6 +269,7 @@
                             ?>
 
                             <td><?= $result['jam']  ?> <?= $result['kategori']  ?></td>
+                            <td><?= $query_3['nama']  ?></td>
                             <td><a href="edit.php?id=<?=$sql['id_appoinment']?>" class="btn btn-success btn-sm">EDIT</a>
                                 <a onclick="return confirm('Yakin Ingin Menghapus Data Ini ?')" href="process/delete.php?id=<?=$sql['id_appoinment']?>" class="btn btn-danger btn-sm">DELETE</a>
                             </td>

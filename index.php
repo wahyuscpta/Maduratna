@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="img/logo-2.png" type="image/x-icon">
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css?v=<?= time() ?>">
@@ -25,7 +25,7 @@
 
         <nav class="navbar navbar-expand-lg fixed-top primary-nav">
             <div class="container container-md">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <img src="img/logo.png" width="100" height="100" class="d-inline-block align-top logo-1" alt="">
                     <img src="img/logo-2.png" width="100" height="100" class="d-inline-block align-top logo-2" alt="">
                   </a>
@@ -50,7 +50,7 @@
                     <h4>ESTABLISHED 2010</h4>
                     <h1>PROFESSIONAL BARBER SHOP</h1>
                     <P>Rasakan Pengalaman di Barber Shop Terbaik</P>
-                    <button class="btn btn-danger mt-3">BOOKING SEKARANG</button>
+                    <a href="#" class="btn btn-danger mt-3">BOOKING SEKARANG</a>
                 </div>
 
             </div>    
@@ -242,7 +242,7 @@
                                     </div>
     
                                     <div class="col-6">
-                                        <h2 class="float-right price">100K</h2>
+                                        <h2 class="float-right price">50K</h2>
                                     </div>
     
                                     <div class="col-12">
@@ -264,7 +264,7 @@
                                     </div>
     
                                     <div class="col-6">
-                                        <h2 class="float-right price">100K</h2>
+                                        <h2 class="float-right price">80K</h2>
                                     </div>
     
                                     <div class="col-12">
@@ -286,7 +286,7 @@
                                     </div>
     
                                     <div class="col-6">
-                                        <h2 class="float-right price">100K</h2>
+                                        <h2 class="float-right price">40K</h2>
                                     </div>
     
                                     <div class="col-12">
@@ -308,7 +308,7 @@
                                     </div>
     
                                     <div class="col-6">
-                                        <h2 class="float-right price">100K</h2>
+                                        <h2 class="float-right price">75K</h2>
                                     </div>
     
                                     <div class="col-12">
@@ -330,54 +330,62 @@
     <div class="bg-produk mb-5 pb-5">
         <img src="img/ripped/3.png" class="ripped img-fluid" alt="">
 
-        <div class="container">
+        <div class="container" data-aos="zoom-in">
             <div class="row">
 
                 <div class="col-12">
-                    <div class="title-text text-center" data-aos="zoom-in">
+                    <div class="title-text text-center">
                         <h4>PENGALAMAN DENGAN BARBERSHOP TERBAIK</h4>
                         <h1>kami menyediakan produk untuk membantu dalam menata rambut dimanapun dengan mudah</h1>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-6 mt-5">
-                    <div class="card m-3 produk" data-aos="zoom-in">
-                        <img class="card-img-top" src="img/produk/pomade.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title text-center">OIL POMADE</h4>
-                          <h5 class="card-text text-center">35K</h5>
+                    <a href="produk.php">
+                        <div class="card m-3 produk">
+                            <img class="card-img-top" src="img/produk/pomade.jpg" alt="Card image cap">
+                            <div class="card-body">
+                            <h4 class="card-title text-center">OIL POMADE</h4>
+                            <h5 class="card-text text-center">35K</h5>
+                            </div>
                         </div>
-                      </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-6 mt-5">
-                    <div class="card m-3 produk" data-aos="zoom-in">
-                        <img class="card-img-top" src="img/produk/hairspray.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title text-center">HAIRSPRAY</h4>
-                          <h5 class="card-text text-center">50K</h5>
+                    <a href="produk.php">
+                        <div class="card m-3 produk">
+                            <img class="card-img-top" src="img/produk/hairspray.jpg" alt="Card image cap">
+                            <div class="card-body">
+                            <h4 class="card-title text-center">HAIRSPRAY</h4>
+                            <h5 class="card-text text-center">50K</h5>
+                            </div>
                         </div>
-                      </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-6 mt-5">
-                    <div class="card m-3 produk" data-aos="zoom-in">
-                        <img class="card-img-top" src="img/produk/serum.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title text-center">HAIR SERUM</h4>
-                          <h5 class="card-text text-center">75K</h5>
+                    <a href="produk.php">
+                        <div class="card m-3 produk">
+                            <img class="card-img-top" src="img/produk/serum.jpg" alt="Card image cap">
+                            <div class="card-body">
+                            <h4 class="card-title text-center">HAIR SERUM</h4>
+                            <h5 class="card-text text-center">75K</h5>
+                            </div>
                         </div>
-                      </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-6 mt-5">
-                    <div class="card m-3 produk" data-aos="zoom-in">
-                        <img class="card-img-top" src="img/produk/shaver.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title text-center">HAIR SHAVER</h4>
-                          <h5 class="card-text text-center">35K</h5>
+                    <a href="produk.php">
+                        <div class="card m-3 produk">
+                            <img class="card-img-top" src="img/produk/shaver.jpg" alt="Card image cap">
+                            <div class="card-body">
+                            <h4 class="card-title text-center">HAIR SHAVER</h4>
+                            <h5 class="card-text text-center">35K</h5>
+                            </div>
                         </div>
-                      </div>
+                    </a>
                 </div>
                 
 
@@ -386,7 +394,7 @@
 
     </div>
     
-    <div class="bg-appoinment mt-5 pb-5">
+    <div class="bg-appoinment mt-5 pb-5" id="bg-appoinment">
         <div class="container-fluid">
             <div class="row">
 
@@ -482,9 +490,9 @@
   
             <div class="col-md-4 col-sm-6 col-xs-12">
               <ul class="social-icons">
-                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a class="dribbble" href="#"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a class="facebook" href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://api.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="dribbble" href="https://api.whatsapp.com/send?phone=6281932273428"><i class="fab fa-whatsapp"></i></a></li>
               </ul>
             </div>
           </div>

@@ -8,11 +8,11 @@
     $query = mysqli_query($conn, "DELETE FROM tb_staff WHERE id_staff='$a' ");
 
     if(!$query){
-        alert("Data failed to delete", "../view.php");
+        header("location:../view.php?pesan=error");
     }
 
     else{
-        alert("Data has been deleted", "../view.php");
+        header("location:../view.php?pesan=hapus");
     }
 
 ?>

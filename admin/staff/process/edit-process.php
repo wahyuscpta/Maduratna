@@ -19,11 +19,11 @@
     $query = mysqli_query($conn, "UPDATE tb_staff set nama = '$b', job='$c', desc_staff='$d' WHERE id_staff = '$id' ");
 
     if($query){
-        alert("Success to changed", "../view.php");
+        header("location:../view.php?pesan=update");
     }
 
     else{
-        alert("Failed to edit data", "../view.php");
+        header("location:../view.php?pesan=error");
     }
 
 ?>

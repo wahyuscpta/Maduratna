@@ -71,6 +71,13 @@
               <p>Produk</p>
             </a>
           </li>
+                    
+          <li>
+            <a href="../service/view.php">
+            <i class="nc-icon nc-scissors"></i>
+              <p>Services</p>
+            </a>
+          </li>
 
           <li class="active">
             <a href="view.php">
@@ -94,7 +101,7 @@
           </li>
 
           <li class="active-pro">
-            <a href="logout.php">
+          <a href="../process/logout.php">
               <i class="nc-icon nc-button-power"></i>
               <p>Logout</p>
             </a>

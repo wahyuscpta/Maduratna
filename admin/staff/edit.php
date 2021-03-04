@@ -11,6 +11,7 @@
     if(!isset($id)) {header('location: view.php');}
 
     $query = mysqli_query($conn, "SELECT * FROM tb_staff WHERE id_staff = '$id' ");
+    $result = mysqli_fetch_assoc($query);
 
 ?>
 
@@ -67,6 +68,13 @@
               <p>Produk</p>
             </a>
           </li>
+                    
+          <li>
+            <a href="../service/view.php">
+            <i class="nc-icon nc-scissors"></i>
+              <p>Services</p>
+            </a>
+          </li>
 
           <li class="active">
             <a href="view.php">
@@ -90,7 +98,7 @@
           </li>
 
           <li class="active-pro">
-            <a href="logout.php">
+          <a href="../process/logout.php">
               <i class="nc-icon nc-button-power"></i>
               <p>Logout</p>
             </a>
@@ -136,7 +144,25 @@
     <div class="content">
         <div class="row">
 
-          <div class="col-md-12">
+        <div class="col-md-4">
+            <div class="card card-user">
+              <div class="image" style="height: 95px !important"> </div>
+              <div class="card-body">
+                <div class="author">
+                  <a href="#">
+                    <img class="avatar border-gray" src="gambar/<?= $result['gambar'] ?>" alt="..." style="height: 200px !important">
+                    <h5 class="title"><?= $result['nama'] ?></h5>
+                  </a>
+                  <p class="description" style="margin-bottom: 0px !important">
+                    Maduratna Barber Shop
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-md-8">
             <div class="card card-user">
 
               <div class="card-body">

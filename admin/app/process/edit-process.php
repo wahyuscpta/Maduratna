@@ -12,12 +12,12 @@
 
     $query = mysqli_query($conn, "UPDATE tb_appoinment SET nama='$a', notelp='$b', email='$c', tanggal='$d', id_jam='$e' WHERE id_appoinment='$f' ");
     
-    if(!$query){
-        alert("Failed to change data", "../view.php");
+    if($query){
+        header("location:../view.php?pesan=update");
     }
 
     else{
-        alert("Data has been changed", "../view.php");
+        header("location:../view.php?pesan=error");
     }
 
 ?>

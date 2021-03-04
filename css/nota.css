@@ -87,3 +87,13 @@ body{
 .btn-nota{
     margin-top: 20px;
 }
+
+.service{
+    margin-top: 30px;
+}
+
+
+.service p{
+    margin-top: 10px;
+    text-align: center;
+}

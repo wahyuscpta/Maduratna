@@ -7,12 +7,12 @@
 
     $query = mysqli_query($conn, "DELETE FROM tb_appoinment WHERE id_appoinment='$a' ");
 
-    if(!$query){
-        alert("Data failed to delete", "../view.php");
+    if($query){
+        header("location:../view.php?pesan=hapus");
     }
 
     else{
-        alert("Data has been deleted", "../view.php");
+        header("location:../view.php?pesan=error");
     }
 
 ?>

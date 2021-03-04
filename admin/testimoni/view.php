@@ -72,6 +72,13 @@
               <p>Produk</p>
             </a>
           </li>
+                    
+          <li>
+            <a href="../service/view.php">
+              <i class="nc-icon nc-scissors"></i>
+              <p>Services</p>
+            </a>
+          </li>
 
           <li>
             <a href="../staff/view.php">
@@ -95,7 +102,7 @@
           </li>
 
           <li class="active-pro">
-            <a href="logout.php">
+          <a href="../process/logout.php">
               <i class="nc-icon nc-button-power"></i>
               <p>Logout</p>
             </a>
@@ -159,7 +166,7 @@
 
                     if($pesan == "input"){
                         echo "
-                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3'>
+                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3 mt-3'>
                             <button type='button' aria-hidden='true' class='close' data-dismiss='alert' aria-label='Close'>
                               <i class='nc-icon nc-simple-remove'></i>
                             </button>
@@ -169,7 +176,7 @@
 
                     }else if($pesan == "update"){
                         echo "
-                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3'>
+                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3 mt-3'>
                             <button type='button' aria-hidden='true' class='close' data-dismiss='alert' aria-label='Close'>
                               <i class='nc-icon nc-simple-remove'></i>
                             </button>
@@ -179,7 +186,7 @@
 
                     }else if($pesan == "hapus"){
                       echo "
-                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3'>
+                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3 mt-3'>
                             <button type='button' aria-hidden='true' class='close' data-dismiss='alert' aria-label='Close'>
                               <i class='nc-icon nc-simple-remove'></i>
                             </button>
@@ -189,7 +196,7 @@
                     
                     }else{
                       echo "
-                          <div class='alert alert-danger alert-dismissible fade show mr-3 ml-3'>
+                          <div class='alert alert-danger alert-dismissible fade show mr-3 ml-3 mt-3'>
                             <button type='button' aria-hidden='true' class='close' data-dismiss='alert' aria-label='Close'>
                               <i class='nc-icon nc-simple-remove'></i>
                             </button>

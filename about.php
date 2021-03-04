@@ -17,7 +17,7 @@
 
         <nav class="navbar navbar-expand-lg fixed-top primary-nav">
             <div class="container container-md">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <img src="img/logo.png" width="100" height="100" class="d-inline-block align-top logo-1" alt="">
                     <img src="img/logo-2.png" width="100" height="100" class="d-inline-block align-top logo-2" alt="">
                   </a>
@@ -58,13 +58,13 @@
             <div class="row">
 
                 <div class="col-lg-6 mb-5">
-                    <div class="img-about" data-aos="fade-right">
+                    <div class="img-about" data-aos="fade-up">
                         
                     </div>
                 </div>
 
                 <div class="col-lg-6 mb-5 mb-md-1">
-                    <div class="text-about mt-5 pt-4" data-aos="fade-left">
+                    <div class="text-about mt-5 pt-4" data-aos="fade-up">
                         <h4>PENGALAMAN DENGAN BARBERSHOP TERBAIK</h4>
                         <h1>KAMI MENYAMBUT ANDA DENGAN PELAYANAN TERBAIK DALAM SUASAN YANG SANGAT NYAMAN</h1>
                         <p class="mt-5">Maduratna Barbershop terbentuk pada tahun 2010. Maduratna Barbershop merupakan tempat cukur rambut yang mempunyai konsep menggabungkan antara barbershop dengan salon. Inilah kami yang peduli dengan kualitas hasil potongan rambut untuk para customer kami dengan layanan berkualitas tinggi, perlengkapan sanitasi, fasilitas nyaman, dan tukang cukur berpengalaman. Rambut adalah kanvas untuk membuat sebuah karya untuk kami.</p>

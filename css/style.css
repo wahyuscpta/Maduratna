@@ -18,9 +18,13 @@ html{
     scroll-behavior: smooth;
 }
 
+input:focus{
+    outline: none !important;
+}
+
 .main-section{
     height: 100vh;
-    background-image: url(../img/11.jpg);
+    background-image: url(../img/banner/4.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -328,6 +332,10 @@ html{
     margin-top: -300px;
 }
 
+.bg-produk a{
+    text-decoration: none;
+}
+
 .produk{
     transition: .7s;
     cursor: pointer;
@@ -411,7 +419,7 @@ html{
     display: block;
     width: 100%;
     padding: 1rem .75rem !important;
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.5;
     color: #000 !important;
     background-color: #fff;

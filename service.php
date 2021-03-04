@@ -27,7 +27,7 @@
 
         <nav class="navbar navbar-expand-lg fixed-top primary-nav">
             <div class="container container-md">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <img src="img/logo.png" width="100" height="100" class="d-inline-block align-top logo-1" alt="">
                     <img src="img/logo-2.png" width="100" height="100" class="d-inline-block align-top logo-2" alt="">
                   </a>
@@ -74,50 +74,43 @@
                     </button>
                 </div>
 
-                <div class="modal-body">
-                    <form>
+                <form action="proses/appoinment_proses.php" method="POST">
+                    <div class="modal-body">
                         <div class="row align-items-center">
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Lengkap">
+                                    <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Lengkap">
                                 </div>
                             </div>
 
                             <div class="col-12 col-md-6">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="No Telp">
+                                    <input type="number" name="notelp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="No Telp">
                                 </div>
                             </div>
 
                             <div class="col-12 col-md-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                                    <input type="email" name="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
                                 </div>
                             </div>
 
-                            <div class="col-12 col-md-6">
+                            <div class="col-12">
                                 <div class="form-group">
-                                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Tanggal">
+                                    <input type="date" name="tgl" class="form-control" id="exampleInputPassword1" placeholder="Tanggal">
                                 </div>    
-                            </div>
-    
-                            <div class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <select name="" id="exampleInputPassword1" class="pr-3 select-control">
-                                        <option value="">PILIH JAM</option>
-                                    </select>
-                                </div>
                             </div>
 
                         </div>
-                    </form>
-                </div>
+                    </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-                    <button type="button" class="btn btn-primary">SUBMIT APPOINMENT</button>
+                    <button type="submit" name="btn-next" class="btn btn-primary">SUBMIT APPOINMENT</button>
                 </div>
+
+                </form>
+
             </div>
         </div>
     </div>
@@ -156,7 +149,7 @@
                             <p class="text-justify">Layanan perawatan sederhana dan cepat namun berkualitas tinggi yang memberikan potongan rambut paling menarik, diikuti dengan pijat kepala dan punggung dan pemberian pomade.</p>
                             <div class="row">
                                 <div class="col-lg-2 col-md-4 col-6">
-                                    <h4 class="btn btn-secondary">100K</h4>
+                                    <h4 class="btn btn-secondary">50K</h4>
                                 </div>
                                 <div class="col-6 btn-modal">
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">BOOK NOW</button>
@@ -184,7 +177,7 @@
                             <p class="text-justify">Anda menginginkannya, kami membuatnya. Biarkan tukang cukur berpengalaman kami mewarnai rambut Anda dengan sempurna sesuai keinginan.</p>
                             <div class="row">
                                 <div class="col-lg-2 col-md-4 col-6">
-                                    <h4 class="btn btn-secondary">100K</h4>
+                                    <h4 class="btn btn-secondary">80K</h4>
                                 </div>
                                 <div class="col-6 btn-modal">
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">BOOK NOW</button>
@@ -212,7 +205,7 @@
                             <p class="text-justify">Anda menginginkannya, kami membuatnya. Biarkan tukang cukur berpengalaman kami mewarnai rambut Anda dengan sempurna sesuai keinginan.</p>
                             <div class="row">
                                 <div class="col-lg-2 col-md-4 col-6">
-                                    <h4 class="btn btn-secondary">100K</h4>
+                                    <h4 class="btn btn-secondary">40K</h4>
                                 </div>
                                 <div class="col-6 btn-modal">
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">BOOK NOW</button>
@@ -246,7 +239,7 @@
                             <p class="text-justify">Dimulai dengan handuk panas untuk merilekskan kulit Anda dan membuka pori-pori Anda, diikuti dengan pencukuran yang cermat dan nyaman. </p>
                             <div class="row">
                                 <div class="col-lg-2 col-md-4 col-6">
-                                    <h4 class="btn btn-secondary">100K</h4>
+                                    <h4 class="btn btn-secondary">75K</h4>
                                 </div>
                                 <div class="col-6 btn-modal">
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalForm">BOOK NOW</button>

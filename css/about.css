@@ -1,3 +1,7 @@
+.main-section{
+    background-image: url(../img/banner/6.jpg);
+}
+
 .text-about p{
     line-height: 2.5;
 }

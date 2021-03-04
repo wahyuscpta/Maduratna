@@ -11,6 +11,7 @@
     if(!isset($id)) {header('location: view.php');}
 
     $query = mysqli_query($conn, "SELECT * FROM tb_produk WHERE id_produk = '$id' ");
+    $result = mysqli_fetch_assoc($query);
 
 ?>
 
@@ -31,7 +32,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 <!-- CSS Files -->
 <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-<link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+<link href="../assets/css/paper-dashboard.css?v=<?= time() ?>" rel="stylesheet" />
 <!-- CSS Just for demo purpose, don't include it in your project -->
 <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
@@ -67,6 +68,13 @@
               <p>Produk</p>
             </a>
           </li>
+                    
+          <li>
+            <a href="../service/view.php">
+            <i class="nc-icon nc-scissors"></i>
+              <p>Services</p>
+            </a>
+          </li>
 
           <li>
             <a href="../staff/view.php">
@@ -90,7 +98,7 @@
           </li>
 
           <li class="active-pro">
-            <a href="logout.php">
+          <a href="../process/logout.php">
               <i class="nc-icon nc-button-power"></i>
               <p>Logout</p>
             </a>
@@ -136,7 +144,25 @@
     <div class="content">
         <div class="row">
 
-          <div class="col-md-12">
+        <div class="col-md-4">
+            <div class="card card-user">
+              <div class="image"> </div>
+              <div class="card-body">
+                <div class="author">
+                  <a href="#">
+                    <img class="avatar border-gray" src="gambar/<?= $result['gambar'] ?>" alt="...">
+                    <h5 class="title"><?= $result['nama_produk'] ?></h5>
+                  </a>
+                  <p class="description">
+                    Maduratna Barber Shop
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-md-8">
             <div class="card card-user">
 
               <div class="card-body">
@@ -214,6 +240,7 @@
             </div>
           </div>
         </div>
+
       </div>
 
 

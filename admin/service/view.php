@@ -10,13 +10,12 @@
 
         $a = $_POST['keyword'];
 
-        $query = mysqli_query($conn, "SELECT * FROM tb_pesan WHERE nama LIKE '%$a%' OR email LIKE '%$a%' ");
+        $query = mysqli_query($conn, "SELECT * FROM tb_service WHERE nama LIKE '%$a%'");
     }
     else{
-        $query = mysqli_query($conn, "SELECT * FROM tb_pesan");
+        $query = mysqli_query($conn, "SELECT * FROM tb_service");
     }
 
-    $total = mysqli_num_rows($query);
 
 ?>
 
@@ -42,21 +41,11 @@
   <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<style>
-  input{
-    border:none;
-    background-color: transparent;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-  }
-</style>
-
 <body class="">
   <div class="wrapper ">
     
     <div class="sidebar" data-color="white" data-active-color="danger">
-    <div class="logo">
+      <div class="logo">
         <a class="simple-text logo-mini">
           <div class="logo-image-small pt-1">
             <i class="nc-icon nc-circle-10"></i>
@@ -83,9 +72,9 @@
               <p>Produk</p>
             </a>
           </li>
-          
-          <li>
-            <a href="../service/view.php">
+                    
+          <li class="active">
+            <a href="view.php">
             <i class="nc-icon nc-scissors"></i>
               <p>Services</p>
             </a>
@@ -98,8 +87,8 @@
             </a>
           </li>
 
-          <li class="active">
-            <a href="view.php">
+          <li>
+            <a href="../pesan/view.php">
               <i class="nc-icon nc-email-85"></i>
               <p>Pesan</p>
             </a>
@@ -136,7 +125,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="">DAFTAR PESAN</a>
+            <a class="navbar-brand" href="">DAFTAR SERVICES</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -170,6 +159,16 @@
           <div class="col-md-12">
             <div class="card">
 
+              <div class="card-header mb-3">
+                <div class="row">
+                  
+                  <div class="col-6">
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Tambah Data</button>
+                  </div>  
+
+                </div>
+              </div>
+
               <?php 
                 if(isset($_GET['pesan'])){
 
@@ -177,7 +176,7 @@
 
                     if($pesan == "input"){
                         echo "
-                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3 mt-3'>
+                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3'>
                             <button type='button' aria-hidden='true' class='close' data-dismiss='alert' aria-label='Close'>
                               <i class='nc-icon nc-simple-remove'></i>
                             </button>
@@ -187,7 +186,7 @@
 
                     }else if($pesan == "update"){
                         echo "
-                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3 mt-3'>
+                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3'>
                             <button type='button' aria-hidden='true' class='close' data-dismiss='alert' aria-label='Close'>
                               <i class='nc-icon nc-simple-remove'></i>
                             </button>
@@ -197,7 +196,7 @@
 
                     }else if($pesan == "hapus"){
                       echo "
-                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3 mt-3'>
+                          <div class='alert alert-success alert-dismissible fade show mr-3 ml-3'>
                             <button type='button' aria-hidden='true' class='close' data-dismiss='alert' aria-label='Close'>
                               <i class='nc-icon nc-simple-remove'></i>
                             </button>
@@ -222,18 +221,14 @@
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table">
-                    
-                  <?php if($total <= 0){ ?>
-
-                    <?php } else {?>
 
                     <table class="table table-hover table-bordered">
 
                         <thead align="center">
                             <td>No</td>
-                            <td>Nama</td>
-                            <td>Email</td>
-                            <td>Pesan</td>
+                            <td>Service</td>
+                            <td>Deskripsi</td>
+                            <td>Harga</td>
                             <td>Aksi</td>
                         </th>
 
@@ -243,20 +238,16 @@
                         ?>
 
                         <tbody align="center">
-                          <form action="process/reply-process.php" method="POST">
                             <td><?= $i++; ?></td>
                             <td><?= $sql['nama'] ?></td>
-                            <td><?= $sql['email'] ?></td>
-                            <td><?= $sql['pesan'] ?></td>
-                            <td><a href="process/reply-process.php?id=<?=$sql['id_pesan']?>" class="btn btn-success btn-sm mb-1">TESTIMONI</a>
-                                <a onclick="return confirm('Yakin Ingin Menghapus Data Ini ?')" href="process/delete.php?id=<?=$sql['id_pesan']?>" class="btn btn-danger btn-sm mb-1">DELETE</a>
+                            <td class="text-justify"><?= $sql['desc_service'] ?></td>
+                            <td><?= $sql['harga'] ?></td>
+                            <td><a href="edit.php?id=<?=$sql['id_service']?>" class="btn btn-success btn-sm mt-1">EDIT</a>
+                                <a onclick="return confirm('Yakin Ingin Menghapus Data Ini ?')" href="process/delete.php?id=<?=$sql['id_service']?>" class="btn btn-danger btn-sm mt-1">DELETE</a>
                             </td>
-                          </form>
                         </tbody>
 
                         <?php endforeach; ?>
-
-                        <?php }?>
 
                   </table>
                 </div>
@@ -264,6 +255,65 @@
             </div>
           </div>
  
+        </div>
+      </div>
+      
+      <!-- Modal -->
+
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="row">
+
+              <div class="col-md-12">
+                <div class="card card-user">
+
+                  <div class="card-header">
+                    <h5 class="card-title">Tambah Data</h5>
+                  </div>
+
+                  <div class="card-body">
+                    <form action="process/tambah-process.php" method="POST">
+
+                      <div class="row">
+                        <div class="col-md-6 pr-1">
+                          <div class="form-group">
+                            <label>Nama Service</label>
+                            <input type="text" name="nama" class="form-control" placeholder="Nama Produk" >
+                          </div>
+                        </div>
+
+                        <div class="col-md-6 px-1">
+                          <div class="form-group">
+                            <label>Harga</label>
+                            <input type="number" name="harga" class="form-control" placeholder="Harga">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label>Deskripsi Service</label>
+                            <textarea class="form-control textarea" name="desc" placeholder="Deskripsi"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                        <div class="create ml-auto mr-3">
+                          <button type="submit" class="btn btn-primary">Tambah Data</button>
+                        </div>
+                      </div>
+                    </form>
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
       
