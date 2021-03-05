@@ -309,3 +309,9 @@
 </body>
 
 </html>
+
+<script>
+  $(document).ready(function(){
+      $(".alert-dismissible").fadeIn().delay(3000).fadeOut();
+  });
+</script>

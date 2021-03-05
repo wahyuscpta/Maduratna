@@ -197,9 +197,9 @@
 
                 <div class="col-lg-4 col-sm-6 mt-5 mt-md-3" data-aos="fade-up">
                     <div class="card m-3">
-                        <img class="card-img-top" src="img/staff/<?=$row['gambar']?>" alt="Card image cap">
+                        <img class="card-img-top" src="admin/staff/gambar/<?=$row['gambar']?>" alt="Card image cap">
                         <div class="card-body">
-                          <h2 class="card-title"><?=$row['nama']?></h2>
+                          <h2 class="card-title text-uppercase"><?=$row['nama']?></h2>
                           <p class="card-text"><?= $row['job'] ?></p>
                         </div>
                       </div>

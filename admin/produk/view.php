@@ -1,6 +1,7 @@
 <?php
 
     require_once "../../config/conn.php";
+    require_once "../../config/helper.php";
 
     session_start();
 
@@ -193,6 +194,9 @@
                             <span><b> Sukses - </b> Data Berhasil Diupdate</span>
                           </div>                       
                       ";
+                    }else if($pesan == "bukanFoto"){
+
+                      pesan("warning", "Perhatian", "Yang anda upload bukan gambar");
 
                     }else if($pesan == "hapus"){
                       echo "

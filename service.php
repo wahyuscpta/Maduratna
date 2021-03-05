@@ -50,8 +50,8 @@
                 
                 <div class="col-lg-2 col-lg-8 section-part text-left" data-aos="fade-up">
                     <h4>OUR SERVICES</h4>
-                    <h1>PROFESSIONAL BARBER SHOP</h1>
-                    <P>Rasakan Pengalaman di Barber Shop Terbaik</P>
+                    <h1>KETAHUI SEMUA LAYANAN KAMI</h1>
+                    <P>Pelayanan terbaik dengan skill yang profesional</P>
                     <a href="#bg-about"><i class="fa fa-angle-double-down blink" aria-hidden="true"></i></a>
                 </div>
 

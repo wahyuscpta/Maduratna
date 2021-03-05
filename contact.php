@@ -40,8 +40,8 @@
                 
                 <div class="col-lg-2 col-lg-8 section-part text-left" data-aos="fade-up">
                     <h4>CONTACT US</h4>
-                    <h1>PROFESSIONAL BARBER SHOP</h1>
-                    <P>Rasakan Pengalaman di Barber Shop Terbaik</P>
+                    <h1>SILAHKAN HUBUNGI KAMI</h1>
+                    <P>Jika ada sesuatu yang ingin disampaikan</P>
                     <a href="#bg-about"><i class="fa fa-angle-double-down blink" aria-hidden="true"></i></a>
                 </div>
 

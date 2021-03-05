@@ -208,6 +208,16 @@
                             <span><b> Sukses - </b> Data Berhasil Dihapus</span>
                           </div>                       
                       ";
+
+                    }else if($pesan == "warning"){
+                      echo "
+                          <div class='alert alert-warning alert-dismissible fade show mr-3 ml-3'>
+                            <button type='button' aria-hidden='true' class='close' data-dismiss='alert' aria-label='Close'>
+                              <i class='nc-icon nc-simple-remove'></i>
+                            </button>
+                            <span><b> Sukses - </b> Data Berhasil Dihapus</span>
+                          </div>                       
+                      ";
                     
                     }else{
                       echo "

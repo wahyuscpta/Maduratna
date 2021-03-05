@@ -52,8 +52,8 @@
                 
                 <div class="col-lg-2 col-lg-8 section-part text-left" data-aos="fade-up">
                     <h4>OUR PRODUCTS</h4>
-                    <h1>PROFESSIONAL BARBER SHOP</h1>
-                    <P>Rasakan Pengalaman di Barber Shop Terbaik</P>
+                    <h1>SPESIAL HANYA UNTUK ANDA</h1>
+                    <P>Produk kami akan membantu anda dalam urusan rambut</P>
                     <a href="#bg-about"><i class="fa fa-angle-double-down blink" aria-hidden="true"></i></a>
                 </div>
 
@@ -78,7 +78,7 @@
 
                           <div class="col-lg-6 col-12 col-md-6">
                               <div class="img-about">
-                                  <img src="img/detail/<?= $row['gambar'] ?>" alt="">
+                                  <img src="admin/produk/gambar/<?= $row['gambar'] ?>" alt="">
                               </div>
                           </div>
 
@@ -152,7 +152,7 @@
 
                           <div class="col-lg-6 col-12 col-md-6">
                               <div class="img-about">
-                                  <img src="img/detail/<?= $row['gambar'] ?>" alt="">
+                                  <img src="admin/produk/gambar/<?= $row['gambar'] ?>" alt="">
                               </div>
                           </div>
 

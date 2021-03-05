@@ -24,7 +24,7 @@ input:focus{
 
 .main-section{
     height: 100vh;
-    background-image: url(../img/banner/4.jpg);
+    background-image: url(../img/img-banner/4.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -259,7 +259,7 @@ input:focus{
 
 .card{
     margin-top: 50px !important;
-    box-shadow: 10px 15px 15px rgba(0,0,0,0.15);
+    box-shadow: 5px 5px 8px rgb(1 87 155 / 10%);
 }
 
 .card-title{

@@ -11,16 +11,65 @@
     $f = $_POST['fitur_2'];
     $g = $_POST['fitur_3'];    
 
-    move_uploaded_file($_FILES['gambar']['tmp_name'], "../gambar/".$a);
+    $size = $_FILES['gambar']["size"];
+    $error = $_FILES["gambar"]["error"];
+    $ekstensiValid = ['jpg', 'png', 'jpeg']; 
+    $tmpName = $_FILES["gambar"]["tmp_name"];
 
-    $query = mysqli_query($conn, "INSERT INTO tb_produk VALUES ('', '$b', '$c', '$d', '$a', '$e', '$f', '$g')");
+    // CEK KEBERADAAN GAMBAR
 
-    if($query){
-        header("location:../view.php?pesan=input");
+    if ($error === 4){
+
+        $query = mysqli_query($conn, "INSERT INTO tb_produk VALUES ('', '$b', '$c', '$d', '', '$e', '$f', '$g')");
+
+        if($query){
+            header("location:../view.php?pesan=input");
+        }
+    
+        else{
+            header("location:../view.php?pesan=error");
+        }
+
+    } else{
+
+        // CEK EKSTENSI GAMBAR
+
+        $ekstensiGambar = explode('.', $a);
+        $ekstensiGambar = strtolower(end($ekstensiGambar));
+
+        if(!in_array($ekstensiGambar, $ekstensiValid)){
+            
+            header("location:../view.php?pesan=bukanFoto");
+
+        } else {
+
+            // CEK SIZE GAMBAR
+
+            if ($size > 200000){
+
+            alert("Maksimal Size Gambar 2MB", "../view.php");
+
+            } else {
+            
+            // GENERATE NAMA BARU
+
+            $namaFileBaru = uniqid();
+            $a = $namaFileBaru.$ekstensiGambar;
+
+            move_uploaded_file($_FILES['gambar']['tmp_name'], "../gambar/".$a);
+
+            $query = mysqli_query($conn, "INSERT INTO tb_produk VALUES ('', '$b', '$c', '$d', '$a', '$e', '$f', '$g')");
+
+            if($query){
+                alert("Data Berhasil Ditambahkan", "../view.php");
+            }
+        
+            else{
+                alert("Data Gagal Ditambahkan", "../view.php");
+            }            
+            
+        }
+
+        }
     }
-
-    else{
-        header("location:../view.php?pesan=error");
-    }
-
 ?>

@@ -8,16 +8,52 @@
     $c = $_POST['job'];
     $d = $_POST['desc'];
 
-    move_uploaded_file($_FILES['gambar']['tmp_name'], "../gambar/".$a);
+    $size = $_FILES['gambar']["size"];
+    $error = $_FILES["gambar"]["error"];
+    $ekstensiValid = ['jpg', 'png', 'jpeg']; 
+    $tmpName = $_FILES["gambar"]["tmp_name"];
 
-    $query = mysqli_query($conn, "INSERT INTO tb_staff VALUES ('', '$b', '$c', '$d', '$a')");
+    if ($error === 4){
 
-    if($query){
-        header("location:../view.php?pesan=input");
-    }
+        $query = mysqli_query($conn, "INSERT INTO tb_staff VALUES ('', '$b', '$c', '$d', '')");
+        
+        if($query){
+            alert("Data Berhasil Ditambahkan", "../view.php");
+        }
+    
+        else{
+            alert("Data Gagal Ditambahkan", "../view.php");
+        }        
 
-    else{
-        header("location:../view.php?pesan=error");
+    } else{
+
+        // CEK SIZE GAMBAR
+
+        if ($size > 200000){
+
+            alert("Maksimal Size Gambar 2MB", "../view.php");
+
+        } else {
+            
+            // GENERATE NAMA BARU
+
+            $namaFileBaru = uniqid();
+            $a = $namaFileBaru.$ekstensiGambar;
+
+            move_uploaded_file($_FILES['gambar']['tmp_name'], "../gambar/".$a);
+
+            $query = mysqli_query($conn, "INSERT INTO tb_staff VALUES ('', '$b', '$c', '$d', '$a')");
+
+            if($query){
+                alert("Data Berhasil Ditambahkan", "../view.php");
+            }
+        
+            else{
+                alert("Data Gagal Ditambahkan", "../view.php");
+            }            
+            
+        }
+
     }
 
 ?>
