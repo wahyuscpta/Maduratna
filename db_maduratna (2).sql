@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD:db_maduratna (2).sql
 -- Generation Time: Mar 05, 2021 at 09:40 AM
+=======
+-- Generation Time: Mar 04, 2021 at 09:51 AM
+>>>>>>> 3d1522ca6dfdb3ca34f862d9603fb48c5993f55d:db_maduratna (1).sql
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -141,10 +145,17 @@ CREATE TABLE `tb_produk` (
 --
 
 INSERT INTO `tb_produk` (`id_produk`, `nama_produk`, `desc_produk`, `harga`, `gambar`, `fitur_1`, `fitur_2`, `fitur_3`) VALUES
+<<<<<<< HEAD:db_maduratna (2).sql
 (4, 'Maduratna Hairspray', 'Maduratna Hair Serum adalah sebuah produk inovasi dalam dunia styling rambut pria. Membentuk rambut sesuai keinginan dan mempertahankan kerapian model rambut Anda sepanjang hari.Rambut yang ditata tidak mudah berubah.', '35000', '6041c509b03b1.jpg', 'Styling dengan cepat dan mudah', 'Mudah Disisir', 'Menjaga kelembaban rambut'),
 (5, 'Oil Based Pomade', 'Maduratna Oil Based Pomade merupakan Produk penata rambut yang diperuntukan bagi kalian yang suka dengan penampilan rambut yang terlihat natural, dengan Hold yang kuat, mudah diatur dan dapat membantu memberikan tekstur serta volume pada rambut', '50000', '6041c51112620.jpg', 'Cocok untuk semua jenis rambut', 'Mudah disisir ulang', 'Mengandung Aloe Vera'),
 (6, 'Maduratna Hair Serum', 'Maduratna Hair Serum adalah sebuah produk inovasi dalam dunia styling rambut pria. Dengan kandungan ALOE VERA dapat membuat rambut anda tetap sehat. Memberikan TEKSTUR pada rambut dan membuat rambut lebih mengembang sepanjang hari.', '75000', '6041c51c777c9.jpg', 'Mengandung Aloe Vera', 'Mudah Digunakan', 'Tidak mengandung bahan kimia'),
 (12, 'HAIR SHAVER KNIFE', 'Bagi para pria yang setiap hari mencukur jenggot dan kumis wajib untuk memiliki pisau cukur lipat ini. Anda dapat mencukur jenggot dengan lebih rapi seperti layaknya pencukur profesional di salon dan tempat pangkas rambut. Gagang yang nyaman dan mata silet yang tajam membuat mencukur lebih mudah.  SPECIALS FEATURES :', '35000', '6041c5237ddbb.jpg', 'Berbahan Stainless Stell', 'Nyaman digenggam', 'Mudah dibawa kemanapun');
+=======
+(4, 'Maduratna Hairspray', 'Maduratna Hair Serum adalah sebuah produk inovasi dalam dunia styling rambut pria. Membentuk rambut sesuai keinginan dan mempertahankan kerapian model rambut Anda sepanjang hari.Rambut yang ditata tidak mudah berubah.', '35000', 'hairspray.jpg', 'Styling dengan cepat dan mudah', 'Mudah Disisir', 'Menjaga kelembaban rambut'),
+(5, 'Oil Based Pomade', 'Maduratna Oil Based Pomade merupakan Produk penata rambut yang diperuntukan bagi kalian yang suka dengan penampilan rambut yang terlihat natural, dengan Hold yang kuat, mudah diatur dan dapat membantu memberikan tekstur serta volume pada rambut', '50000', 'pomade.jpg', 'Cocok untuk semua jenis rambut', 'Mudah disisir ulang', 'Mengandung Aloe Vera'),
+(6, 'Maduratna Hair Serum', 'Maduratna Hair Serum adalah sebuah produk inovasi dalam dunia styling rambut pria. Dengan kandungan ALOE VERA dapat membuat rambut anda tetap sehat. Memberikan TEKSTUR pada rambut dan membuat rambut lebih mengembang sepanjang hari.', '75000', 'serum.jpg', 'Mengandung Aloe Vera', 'Mudah Digunakan', 'Tidak mengandung bahan kimia'),
+(7, 'Hair Shaver Knife', 'Bagi para pria yang setiap hari mencukur jenggot dan kumis wajib untuk memiliki pisau cukur lipat ini. Anda dapat mencukur jenggot dengan lebih rapi seperti layaknya pencukur profesional di salon dan tempat pangkas rambut. Gagang yang nyaman dan mata silet yang tajam membuat mencukur lebih mudah.', '35000', 'shaver.jpg', 'Berbahan Stainless Stell', 'Nyaman digenggam', 'Mudah dibawa kemanapun');
+>>>>>>> 3d1522ca6dfdb3ca34f862d9603fb48c5993f55d:db_maduratna (1).sql
 
 -- --------------------------------------------------------
 
@@ -294,7 +305,11 @@ ALTER TABLE `tb_pesan`
 -- AUTO_INCREMENT for table `tb_produk`
 --
 ALTER TABLE `tb_produk`
+<<<<<<< HEAD:db_maduratna (2).sql
   MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+=======
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+>>>>>>> 3d1522ca6dfdb3ca34f862d9603fb48c5993f55d:db_maduratna (1).sql
 
 --
 -- AUTO_INCREMENT for table `tb_service`
