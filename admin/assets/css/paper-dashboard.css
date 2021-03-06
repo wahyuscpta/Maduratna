@@ -28,6 +28,10 @@ Copyright (c) 2015 Daniel Eden
   text-decoration: none !important;
 }
 
+@media screen and( max-width){
+  .navbar-toggler{display: none;}
+}
+
 .card-user .avatar {
   border-radius: 10px !important;
   width: 200px !important;

@@ -11,7 +11,7 @@
 
     if(!empty($a) && !empty($b) && !empty($c)){
 
-        $query = mysqli_query($conn, "INSERT INTO tb_pesan VALUES ('', '$a', '$b', '$c') ");
+        $query = mysqli_query($conn, "INSERT INTO tb_pesan VALUES ('', '$a', '$b', '$c', '') ");
 
         if(!$query){
             alert('Pesan Gagal Dikirim', '../contact.php');

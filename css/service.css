@@ -8,6 +8,7 @@
 
 .text-detail-service h1, .text-detail-service-second h1{
     letter-spacing: 3px;
+    color: #444;
 }
 
 .rate{
@@ -113,6 +114,7 @@
 }
 
 .name-testi h3{
+    color: #444;
     letter-spacing: 2px;
 }
 

@@ -1,6 +1,7 @@
 <?php
 
     require_once "../../config/conn.php";
+    require_once "../../config/helper.php";
 
     session_start();
 
@@ -35,13 +36,16 @@
 <link href="../assets/css/paper-dashboard.css?v=<?= time() ?>" rel="stylesheet" />
 <!-- CSS Just for demo purpose, don't include it in your project -->
 <link href="../assets/demo/demo.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="../css/nav.css">
+
 </head>
 
 <body class="">
 <div class="wrapper ">
   
   <div class="sidebar" data-color="white" data-active-color="danger">
-  <div class="logo">
+    <div class="logo">
         <a class="simple-text logo-mini">
           <div class="logo-image-small pt-1">
             <i class="nc-icon nc-circle-10"></i>
@@ -141,6 +145,23 @@
     </nav>
     <!-- End Navbar -->
 
+      <nav class="new">
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="nc-icon nc-align-center"></i>
+          </label>
+          <label class="navbar-brand">DASHBOARD PRODUK</label>
+          <ul>
+            <li><a href="../app/view.php">Appoinment</a></li>
+            <li><a class="active" href="view.php">Produk</a></li>
+            <li><a href="../service/view.php">Services</a></li>
+            <li><a href="../staff/view.php">Staff</a></li>
+            <li><a href="../pesan/view.php">Pesan</a></li>
+            <li><a href="../testimoni/view.php">Testimoni</a></li>
+          </ul>
+      </nav>
+
+
     <div class="content">
         <div class="row">
 
@@ -166,6 +187,31 @@
             <div class="card card-user">
 
               <div class="card-body">
+
+                <?php            
+
+                  if(isset($_GET['pesan'])){
+
+                    $pesan = $_GET['pesan'];
+
+                    if($pesan == "bukanFoto"){
+
+                      pesan("warning", "Perhatian", "Yang anda upload bukan gambar");
+    
+                    } else if ($pesan == "terlaluBesar"){
+    
+                      pesan("warning", "Perhatian", "Ukuran Foto Maksimal 2MB");
+    
+                    } else {
+    
+                      pesan("error", "Gagal", "Perintah Gagal Dieksekusi");
+    
+                    }
+
+                }
+
+                
+                ?>
 
                 <?php foreach($query as $sql) : ?>
 

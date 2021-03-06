@@ -34,13 +34,15 @@
 <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
 <!-- CSS Just for demo purpose, don't include it in your project -->
 <link href="../assets/demo/demo.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/nav.css">
+
 </head>
 
 <body class="">
 <div class="wrapper ">
   
   <div class="sidebar" data-color="white" data-active-color="danger">
-  <div class="logo">
+    <div class="logo">
         <a class="simple-text logo-mini">
           <div class="logo-image-small pt-1">
             <i class="nc-icon nc-circle-10"></i>
@@ -138,6 +140,23 @@
     </nav>
     <!-- End Navbar -->
 
+      <nav class="new">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="nc-icon nc-align-center"></i>
+        </label>
+        <label class="navbar-brand">DASHBOARD APPOINMENT</label>
+        <ul>
+          <li><a class="active" href="view.php">Appoinment</a></li>
+          <li><a href="../produk/view.php">Produk</a></li>
+          <li><a href="../service/view.php">Services</a></li>
+          <li><a href="../staff/view.php">Staff</a></li>
+          <li><a href="../pesan/view.php">Pesan</a></li>
+          <li><a href="../testimoni/view.php">Testimoni</a></li>
+        </ul>
+      </nav>
+
+
     <div class="content">
         <div class="row">
 
@@ -201,7 +220,7 @@
                         
                         <div class="col-md-6 pl-1">
                           <div class="form-group">
-                            <label>Confrankert</label>
+                            <label>Jam</label>
                             <select name="jam" class="pr-3 form-control">
                                 <option value="<?= $sql['id_jam'] ?>"><?= $fetch['jam'] ?> <?= $fetch['kategori'] ?> </option>
                                 <?php foreach ($query as $row) :  ?>
@@ -211,6 +230,39 @@
                           </div>
                         </div>
                       </div>
+
+                      <div class="row">
+
+                        <?php
+
+                            $tgl = $sql['tanggal'];
+                            $jam = "SELECT * FROM tb_jam WHERE id_jam NOT IN (SELECT id_jam FROM tb_appoinment WHERE tanggal='$tgl' )";
+                            $query = mysqli_query($conn, $jam);
+
+                            ?>
+
+                            <?php
+
+                            $id_service = $sql['id_service'];
+                            $service  = "SELECT * FROM tb_service";
+                            $query_3 = mysqli_query($conn, $service);
+                            $fetch_2 = mysqli_fetch_assoc($query_3);
+
+                        ?>
+                        
+                        <div class="col-md-12 pl-3">
+                          <div class="form-group">
+                            <label>Services</label>
+                            <select name="service" class="pr-3 form-control">
+                                <option value="<?= $sql['id_service'] ?>"><?= $fetch_2['nama'] ?></option>
+                                <?php foreach ($query_3 as $row_2) :  ?>
+                                <option value="<?= $row_2['id_service'] ?>"><?= $row_2['nama'] ?></option>
+                                <?php endforeach;  ?>   
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      
                       
                       <div class="row">
                         <div class="create ml-auto mr-auto">

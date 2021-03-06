@@ -18,40 +18,52 @@
         $query = mysqli_query($conn, "INSERT INTO tb_staff VALUES ('', '$b', '$c', '$d', '')");
         
         if($query){
-            alert("Data Berhasil Ditambahkan", "../view.php");
+            header("location:../view.php?pesan=input");
         }
     
         else{
-            alert("Data Gagal Ditambahkan", "../view.php");
+            header("location:../view.php?pesan=error");
         }        
 
     } else{
 
-        // CEK SIZE GAMBAR
+         // CEK EKSTENSI GAMBAR
 
-        if ($size > 200000){
+         $ekstensiGambar = explode('.', $a);
+         $ekstensiGambar = strtolower(end($ekstensiGambar));
+ 
+         if(!in_array($ekstensiGambar, $ekstensiValid)){
+             
+             header("location:../view.php?pesan=bukanFoto");
+ 
+         } else {
 
-            alert("Maksimal Size Gambar 2MB", "../view.php");
+            // CEK SIZE GAMBAR
 
-        } else {
+            if ($size > 2000000){
+
+                header("location:../view.php?pesan=terlaluBesar");
+
+            } else {
+                
+                // GENERATE NAMA BARU
+
+                $namaFileBaru = uniqid();
+                $a = $namaFileBaru.$ekstensiGambar;
+
+                move_uploaded_file($_FILES['gambar']['tmp_name'], "../gambar/".$a);
+
+                $query = mysqli_query($conn, "INSERT INTO tb_staff VALUES ('', '$b', '$c', '$d', '$a')");
+
+                if($query){
+                    header("location:../view.php?pesan=input");
+                }
             
-            // GENERATE NAMA BARU
-
-            $namaFileBaru = uniqid();
-            $a = $namaFileBaru.$ekstensiGambar;
-
-            move_uploaded_file($_FILES['gambar']['tmp_name'], "../gambar/".$a);
-
-            $query = mysqli_query($conn, "INSERT INTO tb_staff VALUES ('', '$b', '$c', '$d', '$a')");
-
-            if($query){
-                alert("Data Berhasil Ditambahkan", "../view.php");
+                else{
+                    header("location:../view.php?pesan=error");
+                }            
+                
             }
-        
-            else{
-                alert("Data Gagal Ditambahkan", "../view.php");
-            }            
-            
         }
 
     }

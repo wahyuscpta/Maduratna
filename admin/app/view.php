@@ -37,11 +37,15 @@
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-  <!-- CSS Files -->
+  <!-- CSS Files -->  
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="../css/nav.css">
+
 </head>
 
 <body class="">
@@ -153,6 +157,22 @@
         </div>
       </nav>
       <!-- End Navbar -->
+
+      <nav class="new">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="nc-icon nc-align-center"></i>
+        </label>
+        <label class="navbar-brand">DASHBOARD APPOINMENT</label>
+        <ul>
+          <li><a class="active" href="view.php">Appoinment</a></li>
+          <li><a href="../produk/view.php">Produk</a></li>
+          <li><a href="../service/view.php">Services</a></li>
+          <li><a href="../staff/view.php">Staff</a></li>
+          <li><a href="../pesan/view.php">Pesan</a></li>
+          <li><a href="../testimoni/view.php">Testimoni</a></li>
+        </ul>
+      </nav>
 
       <div class="content">
         <div class="row">
@@ -268,7 +288,7 @@
                             <td><?= $sql['nama'] ?></td>
                             <td><?= $sql['notelp'] ?></td>
                             <td><?= $sql['email'] ?></td>
-                            <td><?= $sql['tanggal'] ?></td>
+                            <td><?= date('d-M-Y', strtotime($sql['tanggal'])) ?></td>
 
                             <?php
                             
@@ -280,8 +300,8 @@
 
                             <td><?= $result['jam']  ?> <?= $result['kategori']  ?></td>
                             <td><?= $query_3['nama']  ?></td>
-                            <td><a href="edit.php?id=<?=$sql['id_appoinment']?>" class="btn btn-success btn-sm">EDIT</a>
-                                <a onclick="return confirm('Yakin Ingin Menghapus Data Ini ?')" href="process/delete.php?id=<?=$sql['id_appoinment']?>" class="btn btn-danger btn-sm">DELETE</a>
+                            <td><a href="edit.php?id=<?=$sql['id_appoinment']?>" class="btn btn-success btn-sm mb-1">EDIT</a>
+                                <a onclick="return confirm('Yakin Ingin Menghapus Data Ini ?')" href="process/delete.php?id=<?=$sql['id_appoinment']?>" class="btn btn-danger btn-sm mb-1">DELETE</a>
                             </td>
                         </tbody>
 
@@ -423,8 +443,6 @@
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chart JS -->
   <script src="../assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->

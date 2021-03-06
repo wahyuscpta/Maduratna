@@ -126,8 +126,8 @@
                                   </div>
                                   
                                     <div class="row mt-5">
-                                      <div class="col-3">
-                                          <h1 class="mt-lg-3 mt-md-3">RP.<?= $row['harga'] ?></h1>
+                                      <div class="col-4 col-md-3">
+                                          <h1 class="mt-lg-3 mt-md-3 harga">RP.<?= $row['harga'] ?></h1>
                                       </div>
 
                                         <div class="col-lg-4 col-md-5 col-8">
@@ -200,7 +200,7 @@
                                   </div>
                                   
                                     <div class="row mt-5">
-                                      <div class="col-3">
+                                      <div class="col-4 col-md-3">
                                           <h1 class="mt-lg-3 mt-md-3">RP.<?= $row['harga'] ?></h1>
                                       </div>
 
@@ -334,11 +334,11 @@
           </div>
 
           <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fab fa-whatsapp"></i></a></li>
-            </ul>
+          <ul class="social-icons">
+                <li><a class="facebook" href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://api.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="dribbble" href="https://api.whatsapp.com/send?phone=6281932273428"><i class="fab fa-whatsapp"></i></a></li>
+              </ul>
           </div>
         </div>
       </div>
