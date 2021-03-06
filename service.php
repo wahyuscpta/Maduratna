@@ -3,9 +3,9 @@
     require_once "config/conn.php";
     require_once "config/helper.php";
 
-    $query = mysqli_query($conn, "SELECT * FROM tb_pesan WHERE status=1 AND id_pesan =3 ");
+    $query = mysqli_query($conn, "SELECT * FROM tb_pesan WHERE status=1 ORDER BY id_pesan ASC LIMIT 1 ");
 
-    $query_2 = mysqli_query($conn, "SELECT * FROM tb_pesan WHERE status=1 AND id_pesan !=3 ");
+    $query_2 = mysqli_query($conn, "SELECT * FROM tb_pesan WHERE status=1 ORDER BY id_pesan ASC LIMIT 1,2 ");
 ?>
 
 <!doctype html>
