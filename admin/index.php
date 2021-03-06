@@ -18,7 +18,7 @@
 
                 <div class="col-6">
                     <div class="text-login align-items-center">
-                        <h1>WELCOME BACK TO MIDDLE-EAST</h1>
+                        <h1>WELCOME BACK TO MADURATNA</h1>
                     </div>
                 </div>
 

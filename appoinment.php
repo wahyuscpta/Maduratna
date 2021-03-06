@@ -36,7 +36,7 @@
             <div class="row">
 
             <div class="col-12 col-md-6">
-                <div class="appoinment">
+                <div class="appoinment" style="margin-top: -20px">
                     <form action="proses/appoinment_proses.php" method="POST">
                         <div class="row align-items-center">
 

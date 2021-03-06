@@ -247,7 +247,11 @@
 
                         <tbody align="center">
                             <td><?= $i++; ?></td>
-                            <td class="p-5"><img src="gambar/<?= $sql['gambar'] ?>" alt="" width="500"></td>
+<<<<<<< Updated upstream
+                            <td><img src="gambar/<?= $sql['gambar'] ?>" alt="" width="500"></td>
+=======
+                            <td class="p-1"><img src="gambar/<?= $sql['gambar'] ?>" alt="" width="500"></td>
+>>>>>>> Stashed changes
                             <td><?= $sql['nama_produk'] ?></td>
                             <td class="text-justify"><?= $sql['desc_produk'] ?></td>
                             <td><?= $sql['harga'] ?></td>
