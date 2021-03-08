@@ -8,12 +8,13 @@
     $b = $_POST['nama'];
     $c = $_POST['job'];
     $d = $_POST['desc'];
+    $h = $_POST['gambarLama'];
 
     if($_FILES["gambar"]["error"] === 4){
         
         $a = $h;
 
-        $query = mysqli_query($conn, "UPDATE tb_staff set nama = '$b', job='$c', desc_staff='$d', $gambar='$a' WHERE id_staff = '$id' ");
+        $query = mysqli_query($conn, "UPDATE tb_staff SET nama = '$b', job='$c', desc_staff='$d', gambar='$a' WHERE id_staff = '$id' ");
 
         if($query){
             header("location:../view.php?pesan=update");

@@ -256,7 +256,7 @@
                             <td>Foto</td>
                             <td>Nama</td>
                             <td>Job</td>
-                            <td>desc_staff</td>
+                            <td>Deskipsi</td>
                             <td>Aksi</td>
                         </th>
 

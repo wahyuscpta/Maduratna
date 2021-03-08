@@ -255,8 +255,16 @@
                             <label>Services</label>
                             <select name="service" class="pr-3 form-control">
                                 <option value="<?= $sql['id_service'] ?>"><?= $fetch_2['nama'] ?></option>
-                                <?php foreach ($query_3 as $row_2) :  ?>
-                                <option value="<?= $row_2['id_service'] ?>"><?= $row_2['nama'] ?></option>
+
+                                <?php
+
+                                  $nama_service  = "SELECT * FROM tb_service";
+                                  $query_4 = mysqli_query($conn, $nama_service);
+                                
+                                ?>
+
+                                <?php foreach ($query_4 as $row_3) :  ?>
+                                <option value="<?= $row_3['id_service'] ?>"><?= $row_3['nama'] ?></option>
                                 <?php endforeach;  ?>   
                             </select>
                           </div>
