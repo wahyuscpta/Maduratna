@@ -40,6 +40,9 @@
   <link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/nav.css">
+
 </head>
 
 <body class="">
@@ -154,6 +157,22 @@
       </nav>
       <!-- End Navbar -->
 
+      <nav class="new">
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="nc-icon nc-align-center"></i>
+          </label>
+          <label class="navbar-brand">DASHBOARD PRODUK</label>
+          <ul>
+            <li><a href="../app/view.php">Appoinment</a></li>
+            <li><a class="active" href="view.php">Produk</a></li>
+            <li><a href="../service/view.php">Services</a></li>
+            <li><a href="../staff/view.php">Staff</a></li>
+            <li><a href="../pesan/view.php">Pesan</a></li>
+            <li><a href="../testimoni/view.php">Testimoni</a></li>
+          </ul>
+      </nav>
+
       <div class="content">
         <div class="row">
 
@@ -194,11 +213,18 @@
                             <span><b> Sukses - </b> Data Berhasil Diupdate</span>
                           </div>                       
                       ";
+
                     }else if($pesan == "bukanFoto"){
 
                       pesan("warning", "Perhatian", "Yang anda upload bukan gambar");
-
-                    }else if($pesan == "hapus"){
+    
+                    } else if ($pesan == "terlaluBesar"){
+    
+                      pesan("warning", "Perhatian", "Ukuran Foto Maksimal 2MB");
+    
+                    }
+                    
+                    else if($pesan == "hapus"){
                       echo "
                           <div class='alert alert-success alert-dismissible fade show mr-3 ml-3'>
                             <button type='button' aria-hidden='true' class='close' data-dismiss='alert' aria-label='Close'>
@@ -247,7 +273,7 @@
 
                         <tbody align="center">
                             <td><?= $i++; ?></td>
-                            <td><img src="gambar/<?= $sql['gambar'] ?>" alt="" width="500"></td>
+                            <td class=""><img src="gambar/<?= $sql['gambar'] ?>" alt="" width="500" class="img-fluid"></td>
                             <td><?= $sql['nama_produk'] ?></td>
                             <td class="text-justify"><?= $sql['desc_produk'] ?></td>
                             <td><?= $sql['harga'] ?></td>
