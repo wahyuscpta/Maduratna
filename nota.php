@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    // if (!isset($_SESSION['id_appoinment'])) { header("location: index.php"); }
+    if (!isset($_SESSION['id_appoinment'])) { header("location: index.php"); }
 
     require_once "config/conn.php";
     require_once "config/helper.php";

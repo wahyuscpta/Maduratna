@@ -159,6 +159,10 @@ input:focus{
     cursor: pointer;
 }
 
+.section-part i:hover{
+    color: #333;
+}
+
 .main-section .ripped{
     position: absolute;
     bottom: -40%;
@@ -911,7 +915,7 @@ input:focus{
 
 @media only screen and (max-width: 1366px){
     .main-section .ripped{
-        bottom: -40% !important;
+        bottom: -45% !important;
     }    
 
     .img-price{
