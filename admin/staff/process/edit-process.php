@@ -16,11 +16,11 @@
         $query = mysqli_query($conn, "UPDATE tb_staff set nama = '$b', job='$c', desc_staff='$d', $gambar='$a' WHERE id_staff = '$id' ");
 
         if($query){
-            alert("Data Berhasil Diupdate", "../view.php");
+            header("location:../view.php?pesan=update");
         }
     
         else{
-            alert("Data Gagal Diupdate", "../view.php");
+            header("location:../view.php?pesan=error");
         }    
 
     } else {
@@ -37,7 +37,7 @@
 
         if(!in_array($ekstensiGambar, $ekstensiValid)){
             
-            alert("Silahkan Upload Gambar dengan Benar", '../view.php');
+            header("location:../view.php?pesan=bukanFoto");
 
         } else {
 
@@ -45,7 +45,7 @@
 
             if ($size > 2000000){
 
-                alert("Maksimal Size Gambar 2MB", "../view.php");
+                header("location:../view.php?pesan=terlaluBesar");
 
             } else {
                 
@@ -59,11 +59,11 @@
                 $query = mysqli_query($conn, "UPDATE tb_staff set nama = '$b', job='$c', desc_staff='$d', gambar='$a' WHERE id_staff = '$id' ");
 
                 if($query){
-                    alert("Data Berhasil Diupdate", "../view.php");
+                    header("location:../view.php?pesan=update");
                 }
             
                 else{
-                    alert("Data Gagal Diupdate", "../view.php");
+                    header("location:../view.php?pesan=error");
                 }            
                 
             }

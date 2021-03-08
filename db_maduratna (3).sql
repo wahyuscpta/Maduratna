@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD:db_maduratna (2).sql
--- Generation Time: Mar 05, 2021 at 09:40 AM
-=======
--- Generation Time: Mar 04, 2021 at 09:51 AM
->>>>>>> 3d1522ca6dfdb3ca34f862d9603fb48c5993f55d:db_maduratna (1).sql
+-- Generation Time: Mar 06, 2021 at 09:39 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -66,10 +62,12 @@ CREATE TABLE `tb_appoinment` (
 --
 
 INSERT INTO `tb_appoinment` (`id_appoinment`, `nama`, `notelp`, `email`, `tanggal`, `id_jam`, `id_service`) VALUES
-('MDR001', 'ASDA', '87653421', 'wahyuscpta13@gmail.com', '2021-03-05', 1, 1),
 ('MDR002', 'qweqwe', '453', 'qweqwe@wqe', '2021-03-05', 5, 2),
 ('MDR003', 'MAN HAIRCUTING', '342432', 'tripbocil@gmail.com123', '2021-03-05', 6, 2),
-('MDR004', 'Eka Laksmana', '4564646', 'crincekronis@gmail.com', '2021-03-05', 9, 1);
+('MDR004', 'Eka Laksmana', '4564646', 'crincekronis@gmail.com', '2021-03-05', 9, 4),
+('MDR005', 'Valentino', '081353682227', 'jehaut23@gmail.com', '2040-07-27', 13, 4),
+('MDR006', 'tino', '08135342', 'jehaut23@gmail.com', '2021-03-26', 5, 2),
+('MDR007', 'IH GA MAU GA SUKA GELAYY', '988888888888', 'GELAY@GMAIL.COM', '0000-00-00', 10, 4);
 
 -- --------------------------------------------------------
 
@@ -110,18 +108,18 @@ CREATE TABLE `tb_pesan` (
   `id_pesan` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `pesan` text NOT NULL
+  `pesan` text NOT NULL,
+  `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_pesan`
 --
 
-INSERT INTO `tb_pesan` (`id_pesan`, `nama`, `email`, `pesan`) VALUES
-(1, 'Wahyu Sucipta', 'wahyuscpta13@gmail.com', 'Mantap ANJENG'),
-(3, 'Trip Bocil', 'tripbocil@gmail.com', 'Murah, nyaman, dan layanannya lengkap serta hasil potongannya selalu pas dan sesuai ekspetasi. Rasanya Beda dari tempat lain.\r\n'),
-(4, 'Johm Andreas', 'johnandreas@gmail.com', 'Staffnya ramah dan enak untuk diajak komunikasi dan menyesuaikan apa yang kita mau. Dan says sudah berlangganan 3 bulan dan tidak pernah kecewa dengan pelayanannya,'),
-(5, 'Peter Jamerson', 'peterjemerson@gmail.com', 'Cocok Guntingannya, saya sudah menjadi pelanggan sejak Maduratna Barber Shop pertama kali buka. Tinggal datang, duduk, pulang. Sangat menyenangkan potong rambut disini.');
+INSERT INTO `tb_pesan` (`id_pesan`, `nama`, `email`, `pesan`, `status`) VALUES
+(3, 'Trip Bocil', 'tripbocil@gmail.com', 'Murah, nyaman, dan layanannya lengkap serta hasil potongannya selalu pas dan sesuai ekspetasi. Rasanya Beda dari tempat lain.\r\n', 1),
+(4, 'Johm Andreas', 'johnandreas@gmail.com', 'Staffnya ramah dan enak untuk diajak komunikasi dan menyesuaikan apa yang kita mau. Dan says sudah berlangganan 3 bulan dan tidak pernah kecewa dengan pelayanannya,', 1),
+(5, 'Peter Jamerson', 'peterjemerson@gmail.com', 'Cocok Guntingannya, saya sudah menjadi pelanggan sejak Maduratna Barber Shop pertama kali buka. Tinggal datang, duduk, pulang. Sangat menyenangkan potong rambut disini.', 1);
 
 -- --------------------------------------------------------
 
@@ -145,17 +143,10 @@ CREATE TABLE `tb_produk` (
 --
 
 INSERT INTO `tb_produk` (`id_produk`, `nama_produk`, `desc_produk`, `harga`, `gambar`, `fitur_1`, `fitur_2`, `fitur_3`) VALUES
-<<<<<<< HEAD:db_maduratna (2).sql
 (4, 'Maduratna Hairspray', 'Maduratna Hair Serum adalah sebuah produk inovasi dalam dunia styling rambut pria. Membentuk rambut sesuai keinginan dan mempertahankan kerapian model rambut Anda sepanjang hari.Rambut yang ditata tidak mudah berubah.', '35000', '6041c509b03b1.jpg', 'Styling dengan cepat dan mudah', 'Mudah Disisir', 'Menjaga kelembaban rambut'),
 (5, 'Oil Based Pomade', 'Maduratna Oil Based Pomade merupakan Produk penata rambut yang diperuntukan bagi kalian yang suka dengan penampilan rambut yang terlihat natural, dengan Hold yang kuat, mudah diatur dan dapat membantu memberikan tekstur serta volume pada rambut', '50000', '6041c51112620.jpg', 'Cocok untuk semua jenis rambut', 'Mudah disisir ulang', 'Mengandung Aloe Vera'),
 (6, 'Maduratna Hair Serum', 'Maduratna Hair Serum adalah sebuah produk inovasi dalam dunia styling rambut pria. Dengan kandungan ALOE VERA dapat membuat rambut anda tetap sehat. Memberikan TEKSTUR pada rambut dan membuat rambut lebih mengembang sepanjang hari.', '75000', '6041c51c777c9.jpg', 'Mengandung Aloe Vera', 'Mudah Digunakan', 'Tidak mengandung bahan kimia'),
 (12, 'HAIR SHAVER KNIFE', 'Bagi para pria yang setiap hari mencukur jenggot dan kumis wajib untuk memiliki pisau cukur lipat ini. Anda dapat mencukur jenggot dengan lebih rapi seperti layaknya pencukur profesional di salon dan tempat pangkas rambut. Gagang yang nyaman dan mata silet yang tajam membuat mencukur lebih mudah.  SPECIALS FEATURES :', '35000', '6041c5237ddbb.jpg', 'Berbahan Stainless Stell', 'Nyaman digenggam', 'Mudah dibawa kemanapun');
-=======
-(4, 'Maduratna Hairspray', 'Maduratna Hair Serum adalah sebuah produk inovasi dalam dunia styling rambut pria. Membentuk rambut sesuai keinginan dan mempertahankan kerapian model rambut Anda sepanjang hari.Rambut yang ditata tidak mudah berubah.', '35000', 'hairspray.jpg', 'Styling dengan cepat dan mudah', 'Mudah Disisir', 'Menjaga kelembaban rambut'),
-(5, 'Oil Based Pomade', 'Maduratna Oil Based Pomade merupakan Produk penata rambut yang diperuntukan bagi kalian yang suka dengan penampilan rambut yang terlihat natural, dengan Hold yang kuat, mudah diatur dan dapat membantu memberikan tekstur serta volume pada rambut', '50000', 'pomade.jpg', 'Cocok untuk semua jenis rambut', 'Mudah disisir ulang', 'Mengandung Aloe Vera'),
-(6, 'Maduratna Hair Serum', 'Maduratna Hair Serum adalah sebuah produk inovasi dalam dunia styling rambut pria. Dengan kandungan ALOE VERA dapat membuat rambut anda tetap sehat. Memberikan TEKSTUR pada rambut dan membuat rambut lebih mengembang sepanjang hari.', '75000', 'serum.jpg', 'Mengandung Aloe Vera', 'Mudah Digunakan', 'Tidak mengandung bahan kimia'),
-(7, 'Hair Shaver Knife', 'Bagi para pria yang setiap hari mencukur jenggot dan kumis wajib untuk memiliki pisau cukur lipat ini. Anda dapat mencukur jenggot dengan lebih rapi seperti layaknya pencukur profesional di salon dan tempat pangkas rambut. Gagang yang nyaman dan mata silet yang tajam membuat mencukur lebih mudah.', '35000', 'shaver.jpg', 'Berbahan Stainless Stell', 'Nyaman digenggam', 'Mudah dibawa kemanapun');
->>>>>>> 3d1522ca6dfdb3ca34f862d9603fb48c5993f55d:db_maduratna (1).sql
 
 -- --------------------------------------------------------
 
@@ -202,28 +193,6 @@ INSERT INTO `tb_staff` (`id_staff`, `nama`, `job`, `desc_staff`, `gambar`) VALUE
 (1, 'John Alexander', 'Professional Barber', 'Jangan ragu untuk datang kepada saya. Dengan pengalaman dan skill yang saya miliki tentunya menjadi jaminan bahwa anda akan puas melihat hasillnya. So, tunggu apa lagi saya tunggu kedatangan anda di Maduratna Barbershop.', '6041c6ef691ed.jpg'),
 (3, 'Steffan Julle', 'Professional Barber', 'Passion saya adalah mencukur. Seni saya adalah mencukur. Jadi anda tidak salah datang kepada saya karena tidak akan membiarkan customer kecewa. Percayakan kepada kami untuk semua permasalahan rambut anda.', '6041c6e9ec2cb.jpg'),
 (4, 'Alexunder Bryan', 'Professional Barber', 'Sangat bangga bisa bergabung dengan Team Maduratna Barber Shop. Menurut saya memotong rambut adalah seni dan kanvas saya adalah rambut customer. Jadi saya siap memberikan pelayanan yang terbaik untuk kepuasan anda.', '6041c6f506708.jpg');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tb_testimoni`
---
-
-CREATE TABLE `tb_testimoni` (
-  `id_testi` int(11) NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `testimoni` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_testimoni`
---
-
-INSERT INTO `tb_testimoni` (`id_testi`, `nama`, `email`, `testimoni`) VALUES
-(11, 'Trip Bocil', 'tripbocil@gmail.com', 'Murah, nyaman, dan layanannya lengkap serta hasil potongannya selalu pas dan sesuai ekspetasi. Rasanya Beda dari tempat lain.'),
-(12, 'Johm Andreas', 'johnandreas@gmail.com', 'Staffnya ramah dan enak untuk diajak komunikasi dan menyesuaikan apa yang kita mau. Dan says sudah berlangganan 3 bulan dan tidak pernah kecewa dengan pelayanannya,'),
-(20, 'Peter Jamerson', 'peterjemerson@gmail.com', 'Cocok Guntingannya, saya sudah menjadi pelanggan sejak Maduratna Barber Shop pertama kali buka. Tinggal datang, duduk, pulang. Sangat menyenangkan potong rambut disini.');
 
 --
 -- Indexes for dumped tables
@@ -274,12 +243,6 @@ ALTER TABLE `tb_staff`
   ADD PRIMARY KEY (`id_staff`);
 
 --
--- Indexes for table `tb_testimoni`
---
-ALTER TABLE `tb_testimoni`
-  ADD PRIMARY KEY (`id_testi`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -299,17 +262,13 @@ ALTER TABLE `tb_jam`
 -- AUTO_INCREMENT for table `tb_pesan`
 --
 ALTER TABLE `tb_pesan`
-  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tb_produk`
 --
 ALTER TABLE `tb_produk`
-<<<<<<< HEAD:db_maduratna (2).sql
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-=======
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
->>>>>>> 3d1522ca6dfdb3ca34f862d9603fb48c5993f55d:db_maduratna (1).sql
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tb_service`
@@ -321,13 +280,7 @@ ALTER TABLE `tb_service`
 -- AUTO_INCREMENT for table `tb_staff`
 --
 ALTER TABLE `tb_staff`
-  MODIFY `id_staff` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `tb_testimoni`
---
-ALTER TABLE `tb_testimoni`
-  MODIFY `id_testi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_staff` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables

@@ -146,9 +146,9 @@
                                 <div class="socmed">
                                     <div class="socmed">
                                         <ul class="list-group pt-5 mt-3">
-                                            <li class="list-group-item"><i class="fab fa-facebook"></i></li>
-                                            <li class="list-group-item"><i class="fab fa-instagram"></i></li>
-                                            <li class="list-group-item"><i class="fab fa-whatsapp"></i></li>
+                                            <li class="list-group-item"><a href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                                            <li class="list-group-item"><a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                                            <li class="list-group-item"><a href="https://whatsapp.com/"><i class="fab fa-whatsapp"></i></a></li>
                                           </ul>
                                     </div>
                                 </div>
@@ -193,9 +193,9 @@
                             <div class="col-lg-2 col-md-12 col-sm-12">
                                 <div class="socmed" style="justify-content: flex-start;">
                                     <ul class="list-group pt-5 mt-3">
-                                        <li class="list-group-item"><i class="fab fa-facebook"></i></li>
-                                        <li class="list-group-item"><i class="fab fa-instagram"></i></li>
-                                        <li class="list-group-item"><i class="fab fa-whatsapp"></i></li>
+                                            <li class="list-group-item"><a href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                                            <li class="list-group-item"><a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                                            <li class="list-group-item"><a href="https://whatsapp.com/"><i class="fab fa-whatsapp"></i></a></li>
                                       </ul>
                                 </div>
                             </div>
@@ -220,9 +220,9 @@
                                 <div class="socmed">
                                     <div class="socmed">
                                         <ul class="list-group pt-5 mt-3">
-                                            <li class="list-group-item"><i class="fab fa-facebook"></i></li>
-                                            <li class="list-group-item"><i class="fab fa-instagram"></i></li>
-                                            <li class="list-group-item"><i class="fab fa-whatsapp"></i></li>
+                                            <li class="list-group-item"><a href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                                            <li class="list-group-item"><a href="https://instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                                            <li class="list-group-item"><a href="https://whatsapp.com/"><i class="fab fa-whatsapp"></i></a></li>
                                           </ul>
                                     </div>
                                 </div>
@@ -293,10 +293,10 @@
             </div>
   
             <div class="col-md-4 col-sm-6 col-xs-12">
-              <ul class="social-icons">
-                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a class="dribbble" href="#"><i class="fab fa-whatsapp"></i></a></li>
+            <ul class="social-icons">
+                <li><a class="facebook" href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://api.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="dribbble" href="https://api.whatsapp.com/send?phone=6281932273428"><i class="fab fa-whatsapp"></i></a></li>
               </ul>
             </div>
           </div>

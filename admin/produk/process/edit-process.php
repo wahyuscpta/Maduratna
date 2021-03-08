@@ -22,11 +22,11 @@
         $query = mysqli_query($conn, "UPDATE tb_produk set nama_produk = '$b', harga='$c', desc_produk='$d', gambar='$a', fitur_1='$e', fitur_2='$f', fitur_3='$g' WHERE id_produk = '$id' ");
 
         if($query){
-            alert("Data Berhasil Diupdate", "../view.php");
+            header("location:../view.php?pesan=update");    
         }
     
         else{
-            alert("Data Gagal Diupdate", "../view.php");
+            header("location:../view.php?pesan=error");    
         }    
 
     } else {
@@ -43,15 +43,15 @@
 
         if(!in_array($ekstensiGambar, $ekstensiValid)){
             
-            alert("Silahkan Upload Gambar dengan Benar", '../view.php');
+            header("location:../view.php?pesan=bukanFoto");    
 
         } else {
 
             // CEK SIZE GAMBAR
 
-            if ($size > 200000){
+            if ($size > 2000000){
 
-                alert("Maksimal Size Gambar 2MB", "../view.php");
+                header("location:../view.php?pesan=terlaluBesar");    
 
             } else {
                 
@@ -65,11 +65,11 @@
                 $query = mysqli_query($conn, "UPDATE tb_produk set nama_produk = '$b', harga='$c', desc_produk='$d', gambar='$a', fitur_1='$e', fitur_2='$f', fitur_3='$g' WHERE id_produk = '$id' ");
 
                 if($query){
-                    alert("Data Berhasil Diupdate", "../view.php");
+                    header("location:../view.php?pesan=update");    
                 }
             
                 else{
-                    alert("Data Gagal Diupdate", "../view.php");
+                    header("location:../view.php?pesan=error");    
                 }            
                 
             }

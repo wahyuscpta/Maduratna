@@ -5,7 +5,7 @@
 
     $a = $_GET['id'];
 
-    $query = mysqli_query($conn, "DELETE FROM tb_testimoni WHERE id_testi='$a' ");
+    $query = mysqli_query($conn, "UPDATE tb_pesan SET status=0 WHERE id_pesan='$a' ");
 
     if($query){
         header("location:../view.php?pesan=hapus");         

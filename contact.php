@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="maps">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1972.0414590696603!2d115.21943210058237!3d-8.68366492287882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240e44102547d%3A0xd1867fa8fc2ca13a!2sBarber%20Shop%20Caniago!5e0!3m2!1sid!2sid!4v1614233124688!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.9598241689882!2d115.21663511539033!3d-8.695365290987688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240e84514f455%3A0x2034e49436466c41!2sJl.%20Raya%20Sesetan%2C%20Pedungan%2C%20Kec.%20Denpasar%20Sel.%2C%20Kota%20Denpasar%2C%20Bali!5e0!3m2!1sid!2sid!4v1614990840739!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
 
                     </div>
@@ -159,10 +159,10 @@
             </div>
   
             <div class="col-md-4 col-sm-6 col-xs-12">
-              <ul class="social-icons">
-                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a class="dribbble" href="#"><i class="fab fa-whatsapp"></i></a></li>
+            <ul class="social-icons">
+                <li><a class="facebook" href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://api.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="dribbble" href="https://api.whatsapp.com/send?phone=6281932273428"><i class="fab fa-whatsapp"></i></a></li>
               </ul>
             </div>
           </div>

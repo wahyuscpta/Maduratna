@@ -18,6 +18,7 @@
 <head>
  <title>Nota Rekapan Maduratna Barber Shop</title>
  <link rel="stylesheet" type="text/css" href="css/style.css">
+ <link rel="icon" type="image/png" href="../assets/img/favicon.png">
 </head>
 <body>
 

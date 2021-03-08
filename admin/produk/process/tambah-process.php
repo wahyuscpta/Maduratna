@@ -45,9 +45,9 @@
 
             // CEK SIZE GAMBAR
 
-            if ($size > 200000){
+            if ($size > 2000000){
 
-            alert("Maksimal Size Gambar 2MB", "../view.php");
+                header("location:../view.php?pesan=terlaluBesar");    
 
             } else {
             
@@ -61,11 +61,11 @@
             $query = mysqli_query($conn, "INSERT INTO tb_produk VALUES ('', '$b', '$c', '$d', '$a', '$e', '$f', '$g')");
 
             if($query){
-                alert("Data Berhasil Ditambahkan", "../view.php");
+                header("location:../view.php?pesan=input");    
             }
         
             else{
-                alert("Data Gagal Ditambahkan", "../view.php");
+                header("location:../view.php?pesan=error");    
             }            
             
         }

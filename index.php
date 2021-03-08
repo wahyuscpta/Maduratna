@@ -5,6 +5,8 @@
 
     $query = mysqli_query($conn, "SELECT * FROM tb_staff");
 
+    $query_2 = mysqli_query($conn, "SELECT * FROM tb_service");
+
 ?>
 
 <!doctype html>
@@ -231,93 +233,33 @@
                     </div>
 
                     <div class="row" data-aos="fade-up">
+
+                    <?php foreach($query_2 as $row_2) : ?> 
+
                         <div class="col-12 pt-5">
                             <div class="list">
                                 <div class="row">
     
                                     <div class="col-6">
                                         <div class="title-list">
-                                            <h2 class="float-left">MAN HAIRCUTING</h2>
+                                            <h2 class="float-left"><?=$row_2['nama'] ?></h2>
                                         </div>
                                     </div>
     
                                     <div class="col-6">
-                                        <h2 class="float-right price">50K</h2>
+                                        <h2 class="float-right price"><?= substr($row_2['harga'], 0, 2) ?>K</h2>
                                     </div>
     
                                     <div class="col-12">
-                                        <p>Layanan perawatan sederhana dan cepat namun berkualitas tinggi yang memberikan potongan rambut paling menarik, diikuti dengan pijat kepala dan punggung dan pemberian pomade.</p>
+                                        <p><?= $row_2['desc_service'] ?></p>
                                     </div>
     
                                 </div>
                             </div>
                         </div>
-    
-                        <div class="col-12 pt-4">
-                            <div class="list">
-                                <div class="row">
-    
-                                    <div class="col-6">
-                                        <div class="title-list">
-                                            <h2 class="float-left">HAIR COLORING</h2>
-                                        </div>
-                                    </div>
-    
-                                    <div class="col-6">
-                                        <h2 class="float-right price">80K</h2>
-                                    </div>
-    
-                                    <div class="col-12">
-                                        <p>Anda menginginkannya, kami membuatnya. Biarkan tukang cukur berpengalaman kami mewarnai rambut Anda dengan sempurna sesuai keinginan.</p>
-                                    </div>
-    
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="col-12 pt-4">
-                            <div class="list">
-                                <div class="row">
-    
-                                    <div class="col-6">
-                                        <div class="title-list">
-                                            <h2 class="float-left">Beard Shaving</h2>
-                                        </div>
-                                    </div>
-    
-                                    <div class="col-6">
-                                        <h2 class="float-right price">40K</h2>
-                                    </div>
-    
-                                    <div class="col-12">
-                                        <p>Dimulai dengan handuk panas untuk merilekskan kulit Anda dan membuka pori-pori Anda, diikuti dengan pencukuran yang cermat dan nyaman. </p>
-                                    </div>
-    
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="col-12 pt-4">
-                            <div class="list">
-                                <div class="row">
-    
-                                    <div class="col-6">
-                                        <div class="title-list">
-                                            <h2 class="float-left">HAIR GROOMING</h2>
-                                        </div>
-                                    </div>
-    
-                                    <div class="col-6">
-                                        <h2 class="float-right price">75K</h2>
-                                    </div>
-    
-                                    <div class="col-12">
-                                        <p>Layanan perawatan pria penuh. Dimulai dengan handuk dingin, lalu potong dan cuci rambut, dilanjutkan dengan pijat kepala dan punggung dengan handuk panas, diakhiri dengan pengaplikasian hair tonic dan pomade berkualitas tinggi. </p>
-                                    </div>
-    
-                                </div>
-                            </div>
-                        </div>
+
+                    <?php endforeach; ?> 
+                    
                     </div>
 
                 </div>

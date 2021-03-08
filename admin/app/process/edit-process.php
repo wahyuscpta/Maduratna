@@ -9,8 +9,9 @@
     $d = $_POST['tanggal'];
     $e = $_POST['jam'];
     $f = $_POST['id'];
+    $g = $_POST['service'];
 
-    $query = mysqli_query($conn, "UPDATE tb_appoinment SET nama='$a', notelp='$b', email='$c', tanggal='$d', id_jam='$e' WHERE id_appoinment='$f' ");
+    $query = mysqli_query($conn, "UPDATE tb_appoinment SET nama='$a', notelp='$b', email='$c', tanggal='$d', id_jam='$e', id_service='$g' WHERE id_appoinment='$f' ");
     
     if($query){
         header("location:../view.php?pesan=update");

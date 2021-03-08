@@ -26,20 +26,20 @@ if (isset($_POST['btn-login'])) {
                     session_start();
                     $_SESSION['username'] = $usn;	
                     
-                    alert("Login Success", "../app/view.php");
+                    alert("Login Sukses", "../app/view.php");
 
                 } else {
-                    alert("Sorry Login Failed", "../index.php");
+                    alert("Maaf Login Gagal", "../index.php");
                 }
 
             } else {
-                alert("Sorry, You are not registered", "../index.php");
+                alert("Maaf, Anda tidak terdaftar", "../index.php");
             }
         }else{
-            alert("Sorry, input form should not empty", "../index.php");
+            alert("Maaf, Semua kolom harus terisi", "../index.php");
         }
     } else {
-        alert("Sorry, input form should not empty", "../index.php");
+        alert("Maaf, Semua kolom harus terisi", "../index.php");
     }
 
 } 

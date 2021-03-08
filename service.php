@@ -3,9 +3,9 @@
     require_once "config/conn.php";
     require_once "config/helper.php";
 
-    $query = mysqli_query($conn, "SELECT * FROM tb_testimoni WHERE id_testi =11 ");
+    $query = mysqli_query($conn, "SELECT * FROM tb_pesan WHERE status=1 ORDER BY id_pesan ASC LIMIT 1 ");
 
-    $query_2 = mysqli_query($conn, "SELECT * FROM tb_testimoni WHERE id_testi !=11 ");
+    $query_2 = mysqli_query($conn, "SELECT * FROM tb_pesan WHERE status=1 ORDER BY id_pesan ASC LIMIT 1,2 ");
 ?>
 
 <!doctype html>
@@ -334,7 +334,7 @@
 
                             <div class="col-8">
                                 <div class="text-testi text-center">
-                                    <p><?= $row['testimoni'] ?></p>       
+                                    <p><?= $row['pesan'] ?></p>       
                                 </div>
                             </div>
 
@@ -372,7 +372,7 @@
 
                             <div class="col-8">
                                 <div class="text-testi text-center">
-                                    <p><?= $row['testimoni'] ?></p>       
+                                    <p><?= $row['pesan'] ?></p>       
                                 </div>
                             </div>
 
@@ -444,10 +444,10 @@
             </div>
   
             <div class="col-md-4 col-sm-6 col-xs-12">
-              <ul class="social-icons">
-                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a class="dribbble" href="#"><i class="fab fa-whatsapp"></i></a></li>
+            <ul class="social-icons">
+                <li><a class="facebook" href="https://facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://api.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="dribbble" href="https://api.whatsapp.com/send?phone=6281932273428"><i class="fab fa-whatsapp"></i></a></li>
               </ul>
             </div>
           </div>

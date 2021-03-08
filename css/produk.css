@@ -22,6 +22,10 @@
     text-align: justify;
 }
 
+.features h3{
+    color: #444;
+}
+
 .text-about .list-group-item{
     background-color: transparent !important;
     border: none !important;
@@ -81,6 +85,7 @@
 .text-about .list-group-item i{
     margin-right: 15px;
     margin-top: 5px;
+    color: #444;
 }
 
 .carousel-indicators li{
@@ -189,6 +194,9 @@
     .bg-produk .title-text{
         width: 100%;
         margin-top: 100px;
+    }
+    .harga{
+        margin-top: 5px;
     }
 }
 
