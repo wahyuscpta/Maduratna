@@ -71,7 +71,7 @@
             </a>
           </li>
                     
-          <li>
+          <li class="active">
             <a href="view.php">
             <i class="nc-icon nc-scissors"></i>
               <p>Services</p>

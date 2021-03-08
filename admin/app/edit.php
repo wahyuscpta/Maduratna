@@ -244,7 +244,7 @@
                             <?php
 
                             $id_service = $sql['id_service'];
-                            $service  = "SELECT * FROM tb_service";
+                            $service  = "SELECT * FROM tb_service WHERE id_service='$id_service' ";
                             $query_3 = mysqli_query($conn, $service);
                             $fetch_2 = mysqli_fetch_assoc($query_3);
 
