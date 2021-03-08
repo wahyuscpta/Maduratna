@@ -138,7 +138,7 @@
             <span class="navbar-toggler-bar navbar-kebab"></span>
           </button>
 
-          <form action="" method="GET">
+          <form action="" method="POST">
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
 
                 <div class="input-group no-border">
