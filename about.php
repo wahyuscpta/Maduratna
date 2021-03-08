@@ -156,7 +156,7 @@
 
                             <div class="col-lg-5 col-md-5 col-sm-12">
                                 <div class="img-staff">
-                                    <img src="img/staff/1.jpg" width="300px" alt="">
+                                    <img src="img/staff/2.jpg" width="300px" alt="">
                                 </div>
                             </div>
 
@@ -186,7 +186,7 @@
 
                             <div class="col-lg-5 col-md-5 col-sm-12">
                                 <div class="img-staff">
-                                    <img src="img/staff/2.jpg" width="300px" class="rounded float-right" alt="">
+                                    <img src="img/staff/4.jpg" width="300px" class="rounded float-right" alt="">
                                 </div>
                             </div>
 
