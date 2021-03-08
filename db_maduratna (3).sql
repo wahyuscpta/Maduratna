@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2021 at 09:39 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Waktu pembuatan: 08 Mar 2021 pada 17.45
+-- Versi server: 10.1.35-MariaDB
+-- Versi PHP: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_admin`
+-- Struktur dari tabel `tb_admin`
 --
 
 CREATE TABLE `tb_admin` (
@@ -35,7 +36,7 @@ CREATE TABLE `tb_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_admin`
+-- Dumping data untuk tabel `tb_admin`
 --
 
 INSERT INTO `tb_admin` (`id`, `username`, `password`, `status`) VALUES
@@ -44,7 +45,7 @@ INSERT INTO `tb_admin` (`id`, `username`, `password`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_appoinment`
+-- Struktur dari tabel `tb_appoinment`
 --
 
 CREATE TABLE `tb_appoinment` (
@@ -58,21 +59,19 @@ CREATE TABLE `tb_appoinment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_appoinment`
+-- Dumping data untuk tabel `tb_appoinment`
 --
 
 INSERT INTO `tb_appoinment` (`id_appoinment`, `nama`, `notelp`, `email`, `tanggal`, `id_jam`, `id_service`) VALUES
-('MDR002', 'qweqwe', '453', 'qweqwe@wqe', '2021-03-05', 5, 2),
-('MDR003', 'MAN HAIRCUTING', '342432', 'tripbocil@gmail.com123', '2021-03-05', 6, 2),
-('MDR004', 'Eka Laksmana', '4564646', 'crincekronis@gmail.com', '2021-03-05', 9, 4),
-('MDR005', 'Valentino', '081353682227', 'jehaut23@gmail.com', '2040-07-27', 13, 4),
-('MDR006', 'tino', '08135342', 'jehaut23@gmail.com', '2021-03-26', 5, 2),
-('MDR007', 'IH GA MAU GA SUKA GELAYY', '988888888888', 'GELAY@GMAIL.COM', '0000-00-00', 10, 4);
+('MDR004', 'Eka Laksmana', '4564646', 'crincekronis@gmail.com', '2021-03-05', 9, 2),
+('MDR005', 'Trip Bocil', '089635208686', 'wahyuscpta13@gmail.com', '2021-03-09', 1, 2),
+('MDR006', 'Wahyu Sucipta', '089635208686', 'admin@gmail.com', '2021-03-09', 4, 2),
+('MDR007', 'Yusa', '089635208686', 'wahyuscpta13@gmail.com', '2021-03-10', 11, 4);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_jam`
+-- Struktur dari tabel `tb_jam`
 --
 
 CREATE TABLE `tb_jam` (
@@ -82,7 +81,7 @@ CREATE TABLE `tb_jam` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_jam`
+-- Dumping data untuk tabel `tb_jam`
 --
 
 INSERT INTO `tb_jam` (`id_jam`, `jam`, `kategori`) VALUES
@@ -101,7 +100,7 @@ INSERT INTO `tb_jam` (`id_jam`, `jam`, `kategori`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pesan`
+-- Struktur dari tabel `tb_pesan`
 --
 
 CREATE TABLE `tb_pesan` (
@@ -113,7 +112,7 @@ CREATE TABLE `tb_pesan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_pesan`
+-- Dumping data untuk tabel `tb_pesan`
 --
 
 INSERT INTO `tb_pesan` (`id_pesan`, `nama`, `email`, `pesan`, `status`) VALUES
@@ -124,7 +123,7 @@ INSERT INTO `tb_pesan` (`id_pesan`, `nama`, `email`, `pesan`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_produk`
+-- Struktur dari tabel `tb_produk`
 --
 
 CREATE TABLE `tb_produk` (
@@ -139,7 +138,7 @@ CREATE TABLE `tb_produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_produk`
+-- Dumping data untuk tabel `tb_produk`
 --
 
 INSERT INTO `tb_produk` (`id_produk`, `nama_produk`, `desc_produk`, `harga`, `gambar`, `fitur_1`, `fitur_2`, `fitur_3`) VALUES
@@ -151,30 +150,7 @@ INSERT INTO `tb_produk` (`id_produk`, `nama_produk`, `desc_produk`, `harga`, `ga
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_service`
---
-
-CREATE TABLE `tb_service` (
-  `id_service` int(11) NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `desc_service` text NOT NULL,
-  `harga` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tb_service`
---
-
-INSERT INTO `tb_service` (`id_service`, `nama`, `desc_service`, `harga`) VALUES
-(1, 'MAN HAIRCUTING', 'Layanan perawatan sederhana dan cepat namun berkualitas tinggi yang memberikan potongan rambut paling menarik, diikuti dengan pijat kepala dan punggung dan pemberian pomade.', 50000),
-(2, 'HAIR COLORING', 'Anda menginginkannya, kami membuatnya. Biarkan tukang cukur berpengalaman kami mewarnai rambut Anda dengan sempurna sesuai keinginan.', 80000),
-(3, 'BEARD SHAVING', 'Dimulai dengan handuk panas untuk merilekskan kulit Anda dan membuka pori-pori Anda, diikuti dengan pencukuran yang cermat dan nyaman.', 40000),
-(4, 'HAIR GROOMING', 'Layanan perawatan pria penuh. Dimulai dengan handuk dingin, lalu potong dan cuci rambut, dilanjutkan dengan pijat kepala dan punggung dengan handuk panas, diakhiri dengan pengaplikasian hair tonic dan pomade berkualitas tinggi.', 75000);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tb_staff`
+-- Struktur dari tabel `tb_staff`
 --
 
 CREATE TABLE `tb_staff` (
@@ -186,26 +162,26 @@ CREATE TABLE `tb_staff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_staff`
+-- Dumping data untuk tabel `tb_staff`
 --
 
 INSERT INTO `tb_staff` (`id_staff`, `nama`, `job`, `desc_staff`, `gambar`) VALUES
-(1, 'John Alexander', 'Professional Barber', 'Jangan ragu untuk datang kepada saya. Dengan pengalaman dan skill yang saya miliki tentunya menjadi jaminan bahwa anda akan puas melihat hasillnya. So, tunggu apa lagi saya tunggu kedatangan anda di Maduratna Barbershop.', '6041c6ef691ed.jpg'),
-(3, 'Steffan Julle', 'Professional Barber', 'Passion saya adalah mencukur. Seni saya adalah mencukur. Jadi anda tidak salah datang kepada saya karena tidak akan membiarkan customer kecewa. Percayakan kepada kami untuk semua permasalahan rambut anda.', '6041c6e9ec2cb.jpg'),
-(4, 'Alexunder Bryan', 'Professional Barber', 'Sangat bangga bisa bergabung dengan Team Maduratna Barber Shop. Menurut saya memotong rambut adalah seni dan kanvas saya adalah rambut customer. Jadi saya siap memberikan pelayanan yang terbaik untuk kepuasan anda.', '6041c6f506708.jpg');
+(1, 'John Alexander', 'Professional Barber', 'Jangan ragu untuk datang kepada saya. Dengan pengalaman dan skill yang saya miliki tentunya menjadi jaminan bahwa anda akan puas melihat hasillnya. So, tunggu apa lagi saya tunggu kedatangan anda di Maduratna Barbershop.', '604609188086a.jpg'),
+(3, 'Steffan Julle', 'Professional Barber', 'Passion saya adalah mencukur. Seni saya adalah mencukur. Jadi anda tidak salah datang kepada saya karena tidak akan membiarkan customer kecewa. Percayakan kepada kami untuk semua permasalahan rambut anda.', '6046091fb4e38.jpg'),
+(4, 'Alexunder Bryan', 'Professional Barber', 'Sangat bangga bisa bergabung dengan Team Maduratna Barber Shop. Menurut saya memotong rambut adalah seni dan kanvas saya adalah rambut customer. Jadi saya siap memberikan pelayanan yang terbaik untuk kepuasan anda.', '6046092652210.jpg');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `tb_admin`
+-- Indeks untuk tabel `tb_admin`
 --
 ALTER TABLE `tb_admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_appoinment`
+-- Indeks untuk tabel `tb_appoinment`
 --
 ALTER TABLE `tb_appoinment`
   ADD PRIMARY KEY (`id_appoinment`),
@@ -213,81 +189,69 @@ ALTER TABLE `tb_appoinment`
   ADD KEY `id_service` (`id_service`);
 
 --
--- Indexes for table `tb_jam`
+-- Indeks untuk tabel `tb_jam`
 --
 ALTER TABLE `tb_jam`
   ADD PRIMARY KEY (`id_jam`);
 
 --
--- Indexes for table `tb_pesan`
+-- Indeks untuk tabel `tb_pesan`
 --
 ALTER TABLE `tb_pesan`
   ADD PRIMARY KEY (`id_pesan`);
 
 --
--- Indexes for table `tb_produk`
+-- Indeks untuk tabel `tb_produk`
 --
 ALTER TABLE `tb_produk`
   ADD PRIMARY KEY (`id_produk`);
 
 --
--- Indexes for table `tb_service`
---
-ALTER TABLE `tb_service`
-  ADD PRIMARY KEY (`id_service`);
-
---
--- Indexes for table `tb_staff`
+-- Indeks untuk tabel `tb_staff`
 --
 ALTER TABLE `tb_staff`
   ADD PRIMARY KEY (`id_staff`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tb_admin`
+-- AUTO_INCREMENT untuk tabel `tb_admin`
 --
 ALTER TABLE `tb_admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tb_jam`
+-- AUTO_INCREMENT untuk tabel `tb_jam`
 --
 ALTER TABLE `tb_jam`
   MODIFY `id_jam` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `tb_pesan`
+-- AUTO_INCREMENT untuk tabel `tb_pesan`
 --
 ALTER TABLE `tb_pesan`
-  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `tb_produk`
+-- AUTO_INCREMENT untuk tabel `tb_produk`
 --
 ALTER TABLE `tb_produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `tb_service`
---
-ALTER TABLE `tb_service`
-  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `tb_staff`
+-- AUTO_INCREMENT untuk tabel `tb_staff`
 --
 ALTER TABLE `tb_staff`
-  MODIFY `id_staff` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_staff` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `tb_appoinment`
+-- Ketidakleluasaan untuk tabel `tb_appoinment`
 --
 ALTER TABLE `tb_appoinment`
   ADD CONSTRAINT `tb_appoinment_ibfk_1` FOREIGN KEY (`id_service`) REFERENCES `tb_service` (`id_service`);
