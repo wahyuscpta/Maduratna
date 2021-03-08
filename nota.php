@@ -89,11 +89,11 @@
 
         <?php endforeach; ?>
 
-        <p>NB: If you cannot attend the date of the agreement there must be a family representative to confirm the cancellation to our call center.</p>
+        <p>NB: Untuk pembatalan, harap hubungi kami minimal 3 jam sebelumnya. Mohon hormati Penata Rambut dan Pelanggan Lainnya.</p>
 
         <hr>
 
-        <p style="text-align :center">Thank You</p>
+        <p style="text-align :center">Tunjukan Nota Ini Ke Kasir <br> Terima Kasih</p>
 
     </div>
 
@@ -112,10 +112,6 @@
 
 <script>
     function printContent(el){
-        var restorePage = document.body.innerHTML;
-        var printContent = document.getElementById(el).innerHTML;
-        document.body.innerHTML = printContent;
         window.print();
-        document.body.innerHTML = restorePage;
     }
 </script>

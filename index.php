@@ -52,7 +52,7 @@
                     <h4>ESTABLISHED 2010</h4>
                     <h1>PROFESSIONAL BARBER SHOP</h1>
                     <P>Rasakan Pengalaman di Barber Shop Terbaik</P>
-                    <a href="#" class="btn btn-danger mt-3">BOOKING SEKARANG</a>
+                    <a href="#bg-appoinment" class="btn btn-danger">BOOKING SEKARANG</a>
                 </div>
 
             </div>    

@@ -144,11 +144,11 @@
 
                         </table>
 
-                        <p>Untuk pembatalan, harap hubungi kami minimal 3 jam sebelumnya. Mohon hormati Staff kami dan Pelanggan Lainnya.</p> 
+                        <p>Untuk pembatalan, harap hubungi kami minimal 3 jam sebelumnya. Mohon hormati Penata Rambut dan Pelanggan Lainnya.</p>
 
                         <hr>
 
-                        <p style="text-align :center">Thank You</p>
+                        <p style="text-align :center">Tunjukan Nota Ini Ke Kasir <br> Terima Kasih</p>
 
                     </div>
                 </div>
